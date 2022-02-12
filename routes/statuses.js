@@ -1,5 +1,5 @@
 /*
- * All routes for sizes (related to applicable items) are defined here
+ * All routes for statuses (related to order statuses) are defined here
  * Since this file is loaded in server.js into api/users,
  *   these routes are mounted onto /users
  * See: https://expressjs.com/en/guide/using-middleware.html#middleware.router
@@ -10,10 +10,10 @@ const router  = express.Router();
 
 module.exports = (db) => {
   router.get("/", (req, res) => {
-    db.query(`SELECT * FROM sizes;`)
+    db.query(`SELECT * FROM statuses;`)
       .then(data => {
-        const sizes = data.rows;
-        res.json({ sizes });
+        const statuses = data.rows;
+        res.json({ statuses });
       })
       .catch(err => {
         res

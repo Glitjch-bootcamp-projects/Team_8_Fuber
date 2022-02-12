@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS statuses CASCADE;
+
+CREATE TABLE statuses (
+  id SERIAL PRIMARY KEY NOT NULL,
+  order_id INTEGER REFERENCES orders(id) NOT NULL,
+  status TEXT DEFAULT 'pending' NOT NULL
+);
