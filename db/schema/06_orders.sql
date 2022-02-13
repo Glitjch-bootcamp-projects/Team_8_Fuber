@@ -5,5 +5,5 @@ CREATE TABLE orders (
   user_id INTEGER REFERENCES users(id) NOT NULL,
   order_date DATE NOT NULL,
   order_time TIME NOT NULL,
-  order_status_id INTEGER REFERENCES statuses(id) DEFAULT 'pending'
+  order_status_id INTEGER REFERENCES statuses(id)
 );
