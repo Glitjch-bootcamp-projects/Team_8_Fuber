@@ -8,13 +8,43 @@
   <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
   <link rel="stylesheet" href="/styles/main.css" type="text/css" />
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
 
   <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
   <script type="text/javascript" src="/scripts/app.js"></script>
+  <script src="js/jquery.js"></script> 
+  <script src="js/moment.min.js"></script> 
+  <script src="js/combodate.js"></script> 
+  
 </head>
 
+
+<%- include('./headers_main.ejs') %>
 <body>
-  <h1>Have fun! 🥔</h1>
+
+  <main>
+
+    <div> 
+      <h1 class="frontPageTitle">You Order, We Deliver</h1>
+    </div>
+
+    <div class="addressBarTime">
+      <input class='addressBar' type="address" name="address" placeholder="Enter Your Address">
+      <button class="Schedule"><i class="fa-solid fa-calendar"></i></button> 
+    </div>
+    <div class="addressSumbit">
+      <div class="Time">
+        <input type="date" id="date" name="scheduleDate" value="Now" min="2021" max="2022"> 
+        <input type="time" id="time" name="scheduleTime" value="Now" min="00:00" max="23:59"> 
+      </div>
+      <form action = '/address' method="GET">
+        <button class='addressBtn' type="submit">Find Restaurants In Your Area</button>
+      </form>
+      </div>  
+  </main>
+
 </body>
 
 </html>
