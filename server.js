@@ -43,6 +43,9 @@ const itemsRoutes = require("./routes/items");
 const orderStatusesRoutes = require("./routes/statuses");
 const orderLineItemsRoutes = require("./routes/lines");
 
+// const placeOrderRoutes = require("./routes/place-order")
+// const checkoutRoutes = require("./routes/checkout")
+
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
 app.use("/api/users", usersRoutes(db));
@@ -53,7 +56,21 @@ app.use("/api/items", itemsRoutes(db));
 app.use("/api/statuses", orderStatusesRoutes(db));
 app.use("/api/lines", orderLineItemsRoutes(db));
 
+// app.use("/api/place-order", placeOrderRoutes(db));
+// app.use("/api/checkout", checkoutRoutes(db));
+
 // Note: mount other resources here, using the same pattern above
+
+
+// load the restaurants page NEEDS THE MISSING EJS FILE IN VIEWS FOLDER
+//   router.get("/", (req, res) => {
+//     res.render("restaurants");
+// });
+
+// load the checkout page NEEDS THE MISSING EJS FILE IN VIEWS FOLDER
+//   router.get("/", (req, res) => {
+//     res.render("checkout");
+// });
 
 // Home page
 // Warning: avoid creating more routes in this file!

@@ -4,7 +4,6 @@ DROP TABLE IF EXISTS items CASCADE;
 CREATE TABLE items (
   id SERIAL PRIMARY KEY NOT NULL,
   rest_id INTEGER REFERENCES restaurants(id) NOT NULL,
-  -- size_id INTEGER REFERENCES sizes(id),
   name VARCHAR(255) NOT NULL,
   description TEXT,
   type VARCHAR(100) NOT NULL,

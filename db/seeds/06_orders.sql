@@ -1,8 +1,104 @@
--- restaurants
-INSERT INTO orders (
-user_id,
-order_date,
-order_time,
-order_status_id
-)
-VALUES (1, '2022-02-02', '24:00:00', 1 );
+-- orders
+
+-- using account_id instead of user_id because only accounts can place order.
+INSERT INTO orders ( account_id, order_date, order_time, order_status_id) VALUES (1, '2022-02-02', '24:00:00', 1 );
+insert into orders (account_id, order_date, order_time, order_status_id) values (22, '2021-02-27', '20:04:44', 4);
+insert into orders (account_id, order_date, order_time, order_status_id) values (10, '2020-11-23', '18:51:29', 2);
+insert into orders (account_id, order_date, order_time, order_status_id) values (2, '2021-09-18', '23:48:51', 4);
+insert into orders (account_id, order_date, order_time, order_status_id) values (22, '2020-12-10', '22:09:05', 1);
+insert into orders (account_id, order_date, order_time, order_status_id) values (12, '2021-05-05', '18:27:30', 3);
+insert into orders (account_id, order_date, order_time, order_status_id) values (22, '2022-01-06', '10:16:29', 3);
+insert into orders (account_id, order_date, order_time, order_status_id) values (8, '2020-11-03', '13:28:26', 2);
+insert into orders (account_id, order_date, order_time, order_status_id) values (17, '2020-12-14', '9:40:27', 1);
+insert into orders (account_id, order_date, order_time, order_status_id) values (11, '2021-01-28', '23:32:44', 1);
+insert into orders (account_id, order_date, order_time, order_status_id) values (9, '2021-12-02', '2:01:59', 2);
+insert into orders (account_id, order_date, order_time, order_status_id) values (8, '2021-04-29', '22:04:08', 4);
+insert into orders (account_id, order_date, order_time, order_status_id) values (7, '2020-10-31', '13:23:22', 3);
+insert into orders (account_id, order_date, order_time, order_status_id) values (21, '2021-01-24', '11:21:27', 1);
+insert into orders (account_id, order_date, order_time, order_status_id) values (13, '2021-01-07', '6:57:02', 2);
+insert into orders (account_id, order_date, order_time, order_status_id) values (1, '2021-03-20', '4:42:15', 1);
+insert into orders (account_id, order_date, order_time, order_status_id) values (4, '2021-08-21', '16:04:13', 1);
+insert into orders (account_id, order_date, order_time, order_status_id) values (9, '2021-10-10', '23:28:34', 4);
+insert into orders (account_id, order_date, order_time, order_status_id) values (15, '2021-11-27', '22:02:07', 2);
+insert into orders (account_id, order_date, order_time, order_status_id) values (6, '2022-02-04', '19:08:03', 4);
+insert into orders (account_id, order_date, order_time, order_status_id) values (11, '2021-11-09', '5:28:48', 3);
+insert into orders (account_id, order_date, order_time, order_status_id) values (8, '2021-06-03', '12:46:22', 3);
+insert into orders (account_id, order_date, order_time, order_status_id) values (2, '2021-01-20', '5:06:00', 3);
+insert into orders (account_id, order_date, order_time, order_status_id) values (18, '2020-11-01', '15:34:14', 2);
+insert into orders (account_id, order_date, order_time, order_status_id) values (20, '2021-03-21', '16:24:23', 1);
+insert into orders (account_id, order_date, order_time, order_status_id) values (17, '2022-01-13', '15:57:07', 2);
+insert into orders (account_id, order_date, order_time, order_status_id) values (23, '2021-08-01', '12:30:56', 3);
+insert into orders (account_id, order_date, order_time, order_status_id) values (24, '2021-05-18', '7:39:33', 2);
+insert into orders (account_id, order_date, order_time, order_status_id) values (18, '2021-04-25', '13:36:44', 3);
+insert into orders (account_id, order_date, order_time, order_status_id) values (6, '2021-11-23', '7:04:07', 1);
+insert into orders (account_id, order_date, order_time, order_status_id) values (25, '2022-01-24', '18:38:10', 4);
+insert into orders (account_id, order_date, order_time, order_status_id) values (24, '2021-03-22', '22:07:56', 4);
+insert into orders (account_id, order_date, order_time, order_status_id) values (7, '2020-09-21', '3:20:55', 3);
+insert into orders (account_id, order_date, order_time, order_status_id) values (9, '2021-10-28', '17:36:37', 4);
+insert into orders (account_id, order_date, order_time, order_status_id) values (16, '2021-03-25', '2:29:00', 3);
+insert into orders (account_id, order_date, order_time, order_status_id) values (10, '2020-11-01', '16:43:59', 4);
+insert into orders (account_id, order_date, order_time, order_status_id) values (19, '2020-10-22', '3:13:08', 1);
+insert into orders (account_id, order_date, order_time, order_status_id) values (13, '2021-05-05', '11:29:51', 1);
+insert into orders (account_id, order_date, order_time, order_status_id) values (17, '2021-06-08', '23:23:45', 4);
+insert into orders (account_id, order_date, order_time, order_status_id) values (12, '2020-10-18', '8:22:20', 2);
+insert into orders (account_id, order_date, order_time, order_status_id) values (7, '2021-03-07', '1:52:53', 2);
+insert into orders (account_id, order_date, order_time, order_status_id) values (3, '2021-04-20', '8:27:50', 4);
+insert into orders (account_id, order_date, order_time, order_status_id) values (25, '2021-05-13', '1:04:11', 1);
+insert into orders (account_id, order_date, order_time, order_status_id) values (23, '2021-09-28', '13:17:52', 3);
+insert into orders (account_id, order_date, order_time, order_status_id) values (17, '2020-10-26', '8:19:43', 3);
+insert into orders (account_id, order_date, order_time, order_status_id) values (9, '2021-07-10', '10:08:05', 2);
+insert into orders (account_id, order_date, order_time, order_status_id) values (14, '2022-01-20', '17:04:39', 4);
+insert into orders (account_id, order_date, order_time, order_status_id) values (12, '2021-11-26', '19:46:18', 1);
+insert into orders (account_id, order_date, order_time, order_status_id) values (18, '2021-07-15', '3:46:48', 1);
+insert into orders (account_id, order_date, order_time, order_status_id) values (1, '2022-01-26', '23:30:12', 4);
+insert into orders (account_id, order_date, order_time, order_status_id) values (15, '2021-02-26', '5:11:26', 4);
+insert into orders (account_id, order_date, order_time, order_status_id) values (4, '2021-07-29', '9:49:30', 2);
+insert into orders (account_id, order_date, order_time, order_status_id) values (11, '2020-10-25', '22:33:16', 4);
+insert into orders (account_id, order_date, order_time, order_status_id) values (9, '2021-02-04', '17:21:09', 3);
+insert into orders (account_id, order_date, order_time, order_status_id) values (13, '2021-11-07', '9:18:35', 1);
+insert into orders (account_id, order_date, order_time, order_status_id) values (10, '2021-11-18', '15:19:32', 1);
+insert into orders (account_id, order_date, order_time, order_status_id) values (17, '2020-12-05', '14:20:41', 3);
+insert into orders (account_id, order_date, order_time, order_status_id) values (24, '2021-05-05', '8:52:08', 1);
+insert into orders (account_id, order_date, order_time, order_status_id) values (18, '2020-11-24', '5:24:23', 4);
+insert into orders (account_id, order_date, order_time, order_status_id) values (25, '2020-11-08', '20:43:42', 4);
+insert into orders (account_id, order_date, order_time, order_status_id) values (7, '2022-01-02', '8:31:41', 4);
+insert into orders (account_id, order_date, order_time, order_status_id) values (21, '2021-05-26', '15:07:56', 1);
+insert into orders (account_id, order_date, order_time, order_status_id) values (5, '2021-01-04', '13:45:41', 4);
+insert into orders (account_id, order_date, order_time, order_status_id) values (13, '2021-06-22', '17:47:51', 2);
+insert into orders (account_id, order_date, order_time, order_status_id) values (11, '2022-02-02', '3:28:47', 2);
+insert into orders (account_id, order_date, order_time, order_status_id) values (6, '2020-09-16', '9:55:06', 3);
+insert into orders (account_id, order_date, order_time, order_status_id) values (23, '2020-11-15', '20:45:40', 4);
+insert into orders (account_id, order_date, order_time, order_status_id) values (14, '2021-12-24', '12:06:47', 4);
+insert into orders (account_id, order_date, order_time, order_status_id) values (16, '2020-10-27', '7:31:08', 1);
+insert into orders (account_id, order_date, order_time, order_status_id) values (1, '2021-09-28', '11:06:03', 1);
+insert into orders (account_id, order_date, order_time, order_status_id) values (19, '2021-05-24', '10:29:18', 2);
+insert into orders (account_id, order_date, order_time, order_status_id) values (10, '2021-12-19', '14:45:52', 3);
+insert into orders (account_id, order_date, order_time, order_status_id) values (1, '2021-12-25', '7:05:01', 4);
+insert into orders (account_id, order_date, order_time, order_status_id) values (3, '2021-09-03', '3:25:36', 3);
+insert into orders (account_id, order_date, order_time, order_status_id) values (11, '2020-12-29', '7:17:38', 3);
+insert into orders (account_id, order_date, order_time, order_status_id) values (16, '2022-01-05', '6:20:29', 1);
+insert into orders (account_id, order_date, order_time, order_status_id) values (25, '2021-05-16', '4:05:21', 3);
+insert into orders (account_id, order_date, order_time, order_status_id) values (17, '2021-08-27', '20:11:18', 2);
+insert into orders (account_id, order_date, order_time, order_status_id) values (18, '2021-08-21', '16:33:14', 4);
+insert into orders (account_id, order_date, order_time, order_status_id) values (22, '2021-06-14', '1:45:35', 3);
+insert into orders (account_id, order_date, order_time, order_status_id) values (12, '2021-07-25', '7:40:48', 3);
+insert into orders (account_id, order_date, order_time, order_status_id) values (5, '2021-08-16', '12:53:08', 1);
+insert into orders (account_id, order_date, order_time, order_status_id) values (12, '2021-02-01', '12:44:17', 1);
+insert into orders (account_id, order_date, order_time, order_status_id) values (9, '2021-01-06', '10:59:54', 4);
+insert into orders (account_id, order_date, order_time, order_status_id) values (15, '2021-09-22', '9:34:03', 4);
+insert into orders (account_id, order_date, order_time, order_status_id) values (25, '2021-04-05', '4:37:55', 1);
+insert into orders (account_id, order_date, order_time, order_status_id) values (23, '2021-03-08', '5:08:29', 3);
+insert into orders (account_id, order_date, order_time, order_status_id) values (14, '2021-07-25', '16:26:03', 1);
+insert into orders (account_id, order_date, order_time, order_status_id) values (22, '2021-08-27', '6:46:31', 3);
+insert into orders (account_id, order_date, order_time, order_status_id) values (1, '2021-10-07', '6:20:11', 3);
+insert into orders (account_id, order_date, order_time, order_status_id) values (9, '2020-11-23', '8:59:34', 2);
+insert into orders (account_id, order_date, order_time, order_status_id) values (15, '2021-10-17', '22:12:21', 1);
+insert into orders (account_id, order_date, order_time, order_status_id) values (12, '2021-04-11', '1:07:49', 1);
+insert into orders (account_id, order_date, order_time, order_status_id) values (6, '2021-05-06', '5:40:19', 3);
+insert into orders (account_id, order_date, order_time, order_status_id) values (15, '2021-07-03', '17:37:16', 3);
+insert into orders (account_id, order_date, order_time, order_status_id) values (3, '2021-11-22', '20:28:50', 2);
+insert into orders (account_id, order_date, order_time, order_status_id) values (8, '2021-12-11', '2:45:35', 4);
+insert into orders (account_id, order_date, order_time, order_status_id) values (5, '2020-10-19', '8:22:17', 1);
+insert into orders (account_id, order_date, order_time, order_status_id) values (14, '2021-09-15', '6:46:23', 2);
+insert into orders (account_id, order_date, order_time, order_status_id) values (10, '2021-09-17', '7:01:13', 2);
+insert into orders (account_id, order_date, order_time, order_status_id) values (10, '2021-10-18', '3:02:05', 2);

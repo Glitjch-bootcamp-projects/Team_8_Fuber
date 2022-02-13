@@ -1,11 +1,113 @@
 -- items
-INSERT INTO items (
-rest_id,
-name,
-description,
-type,
-price,
-image,
-available
- )
-VALUES (1, 'burger', 'a tasty burger', 'american', 350, 'google.com', TRUE);
+-- 
+-- rest_id,
+-- name,
+-- description,
+-- type,
+-- price,
+-- image,
+-- available
+-- 
+
+INSERT INTO items ( rest_id, name, description, type, price, image, available) VALUES (1, 'burger', 'a tasty burger', 'american', 350, 'google.com', TRUE);
+insert into items (rest_id, name, description, type, price, image, available) values (4, 'Norwegian Tortula Moss', 'ac tellus semper interdum mauris ullamcorper purus', 'food', 1258, 'http://dummyimage.com/198x100.png/ff4444/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (13, 'New Mexico Silverbush', 'pretium quis lectus suspendisse potenti in eleifend', 'food', 1392, 'http://dummyimage.com/170x100.png/cc0000/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (19, 'Old Man''s Whiskers', 'dictumst etiam faucibus cursus urna ut', 'food', 1906, 'http://dummyimage.com/240x100.png/5fa2dd/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (3, 'Oblique Maidenhair', 'id ligula suspendisse ornare consequat lectus in est', 'food', 1559, 'http://dummyimage.com/203x100.png/ff4444/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (16, 'Thouinia', 'praesent blandit nam nulla integer pede justo', 'food', 1276, 'http://dummyimage.com/110x100.png/ff4444/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (17, 'Pleodendron', 'rutrum nulla tellus in sagittis dui vel', 'food', 382, 'http://dummyimage.com/226x100.png/5fa2dd/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (13, 'Bitter Dock', 'nec nisi vulputate nonummy maecenas tincidunt lacus at', 'food', 1887, 'http://dummyimage.com/101x100.png/cc0000/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (18, 'Riverbar Bird''s-foot Trefoil', 'primis in faucibus orci luctus', 'food', 355, 'http://dummyimage.com/196x100.png/dddddd/000000', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (15, 'Glossy Hawthorn', 'pretium iaculis diam erat fermentum justo', 'food', 625, 'http://dummyimage.com/154x100.png/cc0000/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (1, 'Cypress Panicgrass', 'habitasse platea dictumst etiam faucibus cursus', 'food', 314, 'http://dummyimage.com/243x100.png/ff4444/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (15, 'Juda''s Bush', 'eget eros elementum pellentesque quisque porta volutpat', 'food', 871, 'http://dummyimage.com/195x100.png/dddddd/000000', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (6, 'Bigleaf Sedge', 'quisque arcu libero rutrum ac', 'food', 1151, 'http://dummyimage.com/113x100.png/dddddd/000000', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (3, 'Vervain', 'diam vitae quam suspendisse potenti', 'food', 1903, 'http://dummyimage.com/163x100.png/cc0000/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (4, 'Wart Lichen', 'ipsum ac tellus semper interdum mauris', 'food', 826, 'http://dummyimage.com/225x100.png/dddddd/000000', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (17, 'Twolobe Clarkia', 'ante vestibulum ante ipsum primis in faucibus orci', 'food', 1832, 'http://dummyimage.com/102x100.png/ff4444/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (4, 'Napa Bluecurls', 'arcu adipiscing molestie hendrerit at vulputate vitae', 'food', 1414, 'http://dummyimage.com/114x100.png/cc0000/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (17, 'Cracked Lichen', 'vitae ipsum aliquam non mauris morbi non lectus', 'food', 967, 'http://dummyimage.com/232x100.png/5fa2dd/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (3, 'Bachang', 'id consequat in consequat ut nulla', 'food', 862, 'http://dummyimage.com/109x100.png/ff4444/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (8, 'Fleshy Porterella', 'ut massa quis augue luctus tincidunt nulla mollis', 'food', 1802, 'http://dummyimage.com/112x100.png/5fa2dd/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (14, 'Clibadium', 'vestibulum sit amet cursus id turpis integer aliquet', 'food', 1109, 'http://dummyimage.com/142x100.png/ff4444/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (4, 'Acroceras', 'maecenas pulvinar lobortis est phasellus sit', 'food', 1513, 'http://dummyimage.com/217x100.png/cc0000/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (13, 'Lecidea Lichen', 'libero convallis eget eleifend luctus', 'food', 1602, 'http://dummyimage.com/178x100.png/5fa2dd/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (16, 'Slender Threeseed Mercury', 'donec quis orci eget orci vehicula condimentum curabitur', 'food', 513, 'http://dummyimage.com/166x100.png/ff4444/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (11, 'Sharpglume Brome', 'diam neque vestibulum eget vulputate ut ultrices vel', 'food', 1319, 'http://dummyimage.com/238x100.png/dddddd/000000', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (19, 'Lagetta', 'adipiscing elit proin risus praesent', 'food', 1932, 'http://dummyimage.com/113x100.png/ff4444/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (16, 'Sack Saltbush', 'proin risus praesent lectus vestibulum quam sapien varius', 'food', 416, 'http://dummyimage.com/127x100.png/dddddd/000000', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (14, 'Red Horse-chestnut', 'quam turpis adipiscing lorem vitae', 'food', 686, 'http://dummyimage.com/202x100.png/cc0000/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (3, 'Willowy Monardella', 'ipsum dolor sit amet consectetuer adipiscing elit', 'food', 1246, 'http://dummyimage.com/177x100.png/dddddd/000000', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (12, 'Hart''s Tonguefern', 'proin interdum mauris non ligula pellentesque ultrices phasellus', 'food', 1437, 'http://dummyimage.com/204x100.png/ff4444/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (20, 'Utah Phacelia', 'interdum in ante vestibulum ante ipsum', 'food', 1906, 'http://dummyimage.com/234x100.png/5fa2dd/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (10, 'Oblong Bluecurls', 'felis fusce posuere felis sed', 'food', 1895, 'http://dummyimage.com/100x100.png/ff4444/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (9, 'Whorled Rosinweed', 'sit amet erat nulla tempus vivamus in', 'food', 1532, 'http://dummyimage.com/236x100.png/dddddd/000000', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (2, 'Chinalaurel', 'habitasse platea dictumst aliquam augue quam', 'food', 599, 'http://dummyimage.com/214x100.png/dddddd/000000', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (3, 'Shipman''s Cyanea', 'venenatis tristique fusce congue diam id', 'food', 741, 'http://dummyimage.com/149x100.png/ff4444/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (6, 'Mignonette', 'primis in faucibus orci luctus et ultrices', 'food', 1190, 'http://dummyimage.com/171x100.png/5fa2dd/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (11, 'Hairy Woollygrass', 'luctus et ultrices posuere cubilia', 'food', 1642, 'http://dummyimage.com/207x100.png/5fa2dd/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (2, 'Kopa', 'et ultrices posuere cubilia curae', 'food', 724, 'http://dummyimage.com/224x100.png/5fa2dd/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (20, 'Emorya', 'eu sapien cursus vestibulum proin eu mi', 'food', 1272, 'http://dummyimage.com/190x100.png/ff4444/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (12, 'Dwarf Chinquapin Oak', 'volutpat dui maecenas tristique est et tempus semper', 'food', 1344, 'http://dummyimage.com/154x100.png/5fa2dd/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (10, 'Low Scleropodium Moss', 'blandit non interdum in ante vestibulum', 'food', 1979, 'http://dummyimage.com/161x100.png/cc0000/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (19, 'Good King Henry', 'quam turpis adipiscing lorem vitae mattis nibh', 'food', 703, 'http://dummyimage.com/173x100.png/5fa2dd/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (14, 'Colocasia', 'vestibulum velit id pretium iaculis diam erat fermentum', 'food', 744, 'http://dummyimage.com/115x100.png/5fa2dd/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (15, 'Coughbush', 'consectetuer eget rutrum at lorem', 'food', 728, 'http://dummyimage.com/107x100.png/5fa2dd/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (20, 'Rimmed Lichen', 'etiam faucibus cursus urna ut', 'food', 1816, 'http://dummyimage.com/101x100.png/ff4444/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (2, 'Elaeocarpus', 'tempus sit amet sem fusce consequat nulla nisl', 'food', 1362, 'http://dummyimage.com/132x100.png/dddddd/000000', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (10, 'Usnea Lichenoconium Lichen', 'nam congue risus semper porta volutpat quam pede', 'food', 692, 'http://dummyimage.com/239x100.png/5fa2dd/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (10, 'Desert Ragwort', 'rutrum neque aenean auctor gravida sem', 'food', 1124, 'http://dummyimage.com/157x100.png/5fa2dd/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (21, 'Black Hickory', 'vestibulum sit amet cursus id turpis', 'food', 1713, 'http://dummyimage.com/171x100.png/ff4444/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (16, 'Woods'' Rose', 'lacus at turpis donec posuere metus', 'food', 377, 'http://dummyimage.com/156x100.png/5fa2dd/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (5, 'Maackia', 'pharetra magna vestibulum aliquet ultrices', 'food', 309, 'http://dummyimage.com/201x100.png/ff4444/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (8, 'Tennessee Yelloweyed Grass', 'nec molestie sed justo pellentesque viverra', 'food', 1289, 'http://dummyimage.com/215x100.png/ff4444/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (12, 'Bedstraw', 'penatibus et magnis dis parturient', 'food', 934, 'http://dummyimage.com/222x100.png/ff4444/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (6, 'Toothedthread', 'aenean lectus pellentesque eget nunc', 'food', 931, 'http://dummyimage.com/217x100.png/5fa2dd/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (2, 'Colorado Four O''clock', 'vel ipsum praesent blandit lacinia erat vestibulum', 'food', 386, 'http://dummyimage.com/128x100.png/cc0000/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (21, 'Chautle Livingrock', 'orci pede venenatis non sodales sed tincidunt eu', 'food', 652, 'http://dummyimage.com/206x100.png/5fa2dd/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (3, 'Green Carpetweed', 'condimentum neque sapien placerat ante nulla justo', 'food', 1756, 'http://dummyimage.com/179x100.png/dddddd/000000', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (13, 'Earth Lichen', 'duis at velit eu est congue elementum in', 'food', 638, 'http://dummyimage.com/219x100.png/dddddd/000000', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (1, 'China Violet', 'ligula nec sem duis aliquam convallis', 'food', 1193, 'http://dummyimage.com/246x100.png/dddddd/000000', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (18, 'Mule Mountain Brickellbush', 'blandit lacinia erat vestibulum sed magna', 'food', 318, 'http://dummyimage.com/124x100.png/5fa2dd/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (8, 'Flaxleaf Monardella', 'amet cursus id turpis integer aliquet', 'food', 1259, 'http://dummyimage.com/133x100.png/dddddd/000000', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (17, 'Entireleaf Western Daisy', 'amet nulla quisque arcu libero rutrum ac lobortis', 'food', 1027, 'http://dummyimage.com/214x100.png/dddddd/000000', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (14, 'Lobed Croton', 'praesent blandit nam nulla integer pede justo lacinia', 'food', 817, 'http://dummyimage.com/186x100.png/dddddd/000000', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (3, 'Carr''s Bittercress', 'ante vivamus tortor duis mattis', 'food', 1291, 'http://dummyimage.com/236x100.png/cc0000/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (2, 'Streambank Wild Hollyhock', 'in blandit ultrices enim lorem ipsum dolor', 'food', 1928, 'http://dummyimage.com/103x100.png/cc0000/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (15, 'Vine Hill Ceanothus', 'at velit eu est congue elementum', 'food', 1891, 'http://dummyimage.com/246x100.png/dddddd/000000', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (16, 'Pseudoleskea Moss', 'interdum mauris ullamcorper purus sit', 'food', 1268, 'http://dummyimage.com/131x100.png/cc0000/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (19, 'Flower Of Stone', 'ante ipsum primis in faucibus', 'food', 1151, 'http://dummyimage.com/229x100.png/5fa2dd/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (16, 'Spreading Bellflower', 'rutrum ac lobortis vel dapibus at diam', 'food', 1213, 'http://dummyimage.com/205x100.png/ff4444/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (11, 'Goldenbush', 'cras mi pede malesuada in imperdiet', 'food', 1756, 'http://dummyimage.com/200x100.png/dddddd/000000', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (7, 'Separated Sedge', 'blandit lacinia erat vestibulum sed magna', 'food', 819, 'http://dummyimage.com/159x100.png/dddddd/000000', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (1, 'Howell''s Marsh Marigold', 'varius ut blandit non interdum in ante vestibulum', 'food', 1495, 'http://dummyimage.com/193x100.png/cc0000/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (14, 'Bald Bedstraw', 'ultrices posuere cubilia curae donec', 'food', 1615, 'http://dummyimage.com/181x100.png/ff4444/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (18, 'Northern Woodrush', 'tincidunt nulla mollis molestie lorem quisque ut', 'food', 321, 'http://dummyimage.com/103x100.png/5fa2dd/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (4, 'Unexpected Larkspur', 'et eros vestibulum ac est lacinia', 'food', 1005, 'http://dummyimage.com/129x100.png/cc0000/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (13, 'Niebla Lichen', 'sit amet erat nulla tempus vivamus in felis', 'food', 1735, 'http://dummyimage.com/136x100.png/cc0000/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (16, 'Slender Hawksbeard', 'sapien arcu sed augue aliquam erat volutpat in', 'food', 665, 'http://dummyimage.com/208x100.png/cc0000/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (14, 'Sierra Willow', 'massa id nisl venenatis lacinia aenean', 'food', 1429, 'http://dummyimage.com/206x100.png/dddddd/000000', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (3, 'Silverweed', 'quis odio consequat varius integer', 'food', 983, 'http://dummyimage.com/190x100.png/cc0000/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (14, 'Annual Desert Milkvetch', 'montes nascetur ridiculus mus vivamus', 'food', 1214, 'http://dummyimage.com/165x100.png/5fa2dd/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (4, 'Copper Zephyrlily', 'rutrum at lorem integer tincidunt', 'food', 1309, 'http://dummyimage.com/230x100.png/5fa2dd/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (8, 'Spiny Threecornerjack', 'felis fusce posuere felis sed lacus morbi', 'food', 1475, 'http://dummyimage.com/162x100.png/dddddd/000000', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (4, 'Mediterranean Lineseed', 'nisi vulputate nonummy maecenas tincidunt lacus', 'food', 1866, 'http://dummyimage.com/191x100.png/cc0000/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (2, 'Java Waterdropwort', 'nec nisi vulputate nonummy maecenas', 'food', 923, 'http://dummyimage.com/237x100.png/dddddd/000000', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (16, 'Rim Lichen', 'leo odio condimentum id luctus nec molestie', 'food', 710, 'http://dummyimage.com/213x100.png/dddddd/000000', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (7, 'Big Deervetch', 'metus vitae ipsum aliquam non', 'food', 1019, 'http://dummyimage.com/111x100.png/cc0000/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (3, 'Lespedeza', 'nam nulla integer pede justo lacinia eget', 'food', 1950, 'http://dummyimage.com/236x100.png/5fa2dd/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (9, 'Perplexed Chiodecton Lichen', 'posuere cubilia curae mauris viverra diam', 'food', 561, 'http://dummyimage.com/182x100.png/dddddd/000000', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (10, 'Puerto Rico Holly', 'eros elementum pellentesque quisque porta volutpat erat', 'food', 1916, 'http://dummyimage.com/147x100.png/5fa2dd/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (2, 'Oneawn Spineflower', 'vestibulum rutrum rutrum neque aenean auctor gravida', 'food', 793, 'http://dummyimage.com/222x100.png/dddddd/000000', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (3, 'Largeleaf Phlox', 'aliquam erat volutpat in congue', 'food', 1294, 'http://dummyimage.com/176x100.png/dddddd/000000', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (14, 'Lanceleaf Springbeauty', 'turpis elementum ligula vehicula consequat morbi', 'food', 1967, 'http://dummyimage.com/170x100.png/ff4444/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (15, 'Hooker''s Balsamroot', 'nulla quisque arcu libero rutrum', 'food', 1138, 'http://dummyimage.com/175x100.png/ff4444/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (14, 'Marijuana', 'sodales sed tincidunt eu felis fusce posuere felis', 'food', 776, 'http://dummyimage.com/248x100.png/5fa2dd/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (4, 'Tall Groundsel', 'justo eu massa donec dapibus', 'food', 1952, 'http://dummyimage.com/163x100.png/ff4444/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (5, 'Calcareous Rimmed Lichen', 'vestibulum quam sapien varius ut blandit', 'food', 705, 'http://dummyimage.com/143x100.png/5fa2dd/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (13, 'Compressed Entodon Moss', 'vestibulum sit amet cursus id turpis integer aliquet', 'food', 1079, 'http://dummyimage.com/116x100.png/5fa2dd/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (16, 'Wavyleaf Indian Paintbrush', 'pede ullamcorper augue a suscipit nulla', 'food', 685, 'http://dummyimage.com/123x100.png/dddddd/000000', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (5, 'Bryocrumia Moss', 'quisque arcu libero rutrum ac', 'food', 1343, 'http://dummyimage.com/153x100.png/ff4444/ffffff', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (17, 'Rusty Indigo', 'sollicitudin vitae consectetuer eget rutrum', 'food', 1957, 'http://dummyimage.com/148x100.png/dddddd/000000', 'TRUE');
+insert into items (rest_id, name, description, type, price, image, available) values (16, 'Mountain Tansymustard', 'eu nibh quisque id justo sit', 'food', 1700, 'http://dummyimage.com/153x100.png/cc0000/ffffff', 'TRUE');
+
