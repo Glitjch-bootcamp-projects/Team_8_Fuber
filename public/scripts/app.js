@@ -1,5 +1,14 @@
 // Client facing scripts here
+
 $(()=> {
+
+  // Jacky
+    //toggles schedule on main page
+    $('.Schedule').click(function() {
+      $('#date').slideToggle();
+      $('#time').slideToggle();
+    });
+
   console.log("client.js touched");
 
   // if user clicks on the submit button should bring user to ordering page
@@ -25,17 +34,24 @@ $(()=> {
     $(".addressBtn").on('click', (data) => {
 
       console.log('click testing submit form');
-      
+  
       // store this data somewhere
       const serializeData = $(".addressBar").serialize();
       console.log('serializedata:    ', serializeData);
+      const address = $("#address").val();
+      $.ajax({
+        url: "/api/restaurants/location-based",
+        type: 'get',
+        data: {address},
+        success: function(data){
+          console.log("ajax data from backend",data);
+        },
+        error: function(error) {
+          console.log(error);
+        }
+      })
 
     })
     // .then(() => generateRestaurants)
-$(document).ready(function() {
-  //toggles schedule on main page
-  $('.Schedule').click(function() {
-    $('#date').slideToggle();
-    $('#time').slideToggle();
-  });
+
 });
