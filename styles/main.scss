@@ -2,16 +2,16 @@ $imagePath : "../images";
 body {
   display: flex;
   justify-content: center;
-
+  align-items: center;
   flex-direction: column;
   background: url(#{$imagePath}/mainPage.jpg);
 }
 
+
 main {
-  height: 90px;
+  
+ margin-top: 300px;
 }
-
-
 
 // Title -------------------------------------------
 .frontPageTitle {
@@ -25,10 +25,8 @@ main {
 }
 
 //labels ------------------------------------------
-.addressSubmit {
-  display: flex;
-  
-}
+
+
 .addressBarTime {
   display: flex;
   flex-direction: row;
