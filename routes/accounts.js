@@ -10,7 +10,7 @@ const router  = express.Router();
 
 module.exports = (db) => {
 
-
+// get all accounts
   router.get("/", (req, res) => {
     db.query(`SELECT * FROM accounts;`)
       .then(data => {

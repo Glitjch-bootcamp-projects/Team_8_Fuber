@@ -9,6 +9,9 @@ const express = require('express');
 const router  = express.Router();
 
 module.exports = (db) => {
+
+
+  // get all restaurants
   router.get("/", (req, res) => {
     db.query(`SELECT * FROM restaurants;`)
       .then(data => {
@@ -21,5 +24,10 @@ module.exports = (db) => {
           .json({ error: err.message });
       });
   });
+
+  
+
+
+  // do not delete
   return router;
 };
