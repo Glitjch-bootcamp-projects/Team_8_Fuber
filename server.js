@@ -40,7 +40,6 @@ const accountsRoutes = require("./routes/accounts");
 const restaurantsRoutes = require("./routes/restaurants");
 const ordersRoutes = require("./routes/orders");
 const itemsRoutes = require("./routes/items");
-const sizesRoutes = require("./routes/sizes");
 const orderStatusesRoutes = require("./routes/statuses");
 const orderLineItemsRoutes = require("./routes/lines");
 
@@ -51,9 +50,8 @@ app.use("/api/accounts", accountsRoutes(db));
 app.use("/api/restaurants", restaurantsRoutes(db));
 app.use("/api/orders", ordersRoutes(db));
 app.use("/api/items", itemsRoutes(db));
-app.use("/api/sizes", sizesRoutes(db));
-app.use("/api/order-statuses", orderStatusesRoutes(db));
-app.use("/api/order-line-items", orderLineItemsRoutes(db));
+app.use("/api/statuses", orderStatusesRoutes(db));
+app.use("/api/lines", orderLineItemsRoutes(db));
 
 // Note: mount other resources here, using the same pattern above
 
