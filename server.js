@@ -63,9 +63,12 @@ app.use("/api/lines", orderLineItemsRoutes(db));
 
 
 // load the restaurants page NEEDS THE MISSING EJS FILE IN VIEWS FOLDER
-//   router.get("/", (req, res) => {
-//     res.render("restaurants");
-// });
+  app.get("/address", (req, res) => { // base path 'address' to match class name, for now.
+    res.render("restaurants");
+  })
+    .then(() => {
+      
+    }) 
 
 // load the checkout page NEEDS THE MISSING EJS FILE IN VIEWS FOLDER
 //   router.get("/", (req, res) => {
