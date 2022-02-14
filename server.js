@@ -21,7 +21,7 @@ db.connect();
 app.use(morgan("dev"));
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
-app.use(bodyParser.urlencoded({ extended: false })); 
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use(
@@ -58,30 +58,48 @@ app.use("/api/items", itemsRoutes(db));
 app.use("/api/statuses", orderStatusesRoutes(db));
 app.use("/api/lines", orderLineItemsRoutes(db));
 
-// app.use("/api/place-order", placeOrderRoutes(db));
-// app.use("/api/checkout", checkoutRoutes(db));
-
 // Note: mount other resources here, using the same pattern above
 
-  app.get("/address", (req, res) => { // base path 'address' to match class name, for now.
-    // console.log(req);
-    const getRestaurantsByAddress = `SELECT * FROM restaurants WHERE location LIKE $1;`;
-    const values = [req.query.address];
-    return db.query(getRestaurantsByAddress, values)
-      .then(data => {
-        console.log('+++++++++++++server.js data', data.rows);
-        const templateVars = {
-          restaurants: data.rows,
-        }
-        res.render("restaurants", templateVars);
-      })
-      .catch(error => console.log(error));
-  })
+// app.get("/address", (req, res) => { // base path 'address' to match class name, for now.
+//   const getRestaurantsByAddress = `SELECT * FROM restaurants WHERE location LIKE $1 LIMIT 3;`;
+//   const values = [req.query.address];
+//   console.log('values', values);
+//   return db.query(getRestaurantsByAddress, values)
+//     // .then(data => {
+//     //   const templateVars = {
+//     //     restaurants: data.rows,
+//     //   }
+//     //   db.query(`SELECT * FROM items LIMIT 3;`, (err, res) => {
+//     //     if (err) { 
+//     //       console.log(err);
+//     //     }
+//     //     console.log('query for items!!!!!!!!!', res.rows);
+//     //     return templateVars.items = res.rows
+//     //   })
+//     //   console.log('first promise ======', templateVars);
+//     //   return templateVars;
+//     // })
+//     .then(data => {
+//       console.log('consolelog',data);
+//       const templateVars = {
+//         restaurants: data.rows,
+//       }
+//       console.log("console log",templateVars);
+//       res.render("restaurants", templateVars);
+//     })
+//     .catch(error => console.log(error));
+// })
 
-// load the checkout page NEEDS THE MISSING EJS FILE IN VIEWS FOLDER
-//   router.get("/", (req, res) => {
-//     res.render("checkout");
+// TESING TWO QUERIES -------------------------
+// app.get("/test", (req, res) => {
+//   console.log("HELLLLLOOOOOOO+++");
+//   return db.query(`SELECT * FROM restaurants WHERE location = 'vancouver';  SELECT * FROM items LIMIT 3;`)
+//     .then(data => {
+//       console.log("data from test ", data[0].rows, data[1].rows);
+//     })
+//     .catch(error => console.log(error))
 // });
+// --------------------------------------------
 
 // Home page
 // Warning: avoid creating more routes in this file!

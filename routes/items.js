@@ -23,8 +23,6 @@ module.exports = (db) => {
       });
   });
 
-
-  
   // do not delete
   return router;
 };
