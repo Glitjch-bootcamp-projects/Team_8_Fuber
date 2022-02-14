@@ -27,16 +27,14 @@ module.exports = (db) => {
 
   // get restaurants from home based on address. Using simple filter e.g. include Vancouver, for now
   router.get("/location-based", (req, res) => {
-    console.log("location-based in routes");
-    console.log('req',req.query);
+    console.log("+++++++++location-based in routes");
+    console.log('++++++++req',req.query);
     const getRestaurantsByAddress = `SELECT * FROM restaurants WHERE location LIKE $1;`;
     const values = [req.query.address];
     return db.query(getRestaurantsByAddress, values)
       .then(data => {
-        console.log('data', data.rows);
+        console.log('++++++data.rows', data.rows);
         res.json({data: data.rows})
-        // res.send("hi")
-        // res.render("restaurants")
       })
       .catch(error => console.log(error));
   });

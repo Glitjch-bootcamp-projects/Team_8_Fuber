@@ -63,15 +63,13 @@ app.use("/api/lines", orderLineItemsRoutes(db));
 
 // Note: mount other resources here, using the same pattern above
 
-
-// load the restaurants page NEEDS THE MISSING EJS FILE IN VIEWS FOLDER
   app.get("/address", (req, res) => { // base path 'address' to match class name, for now.
-    console.log(req);
+    // console.log(req);
     const getRestaurantsByAddress = `SELECT * FROM restaurants WHERE location LIKE $1;`;
     const values = [req.query.address];
     return db.query(getRestaurantsByAddress, values)
       .then(data => {
-        console.log('data', data.rows);
+        console.log('+++++++++++++server.js data', data.rows);
         const templateVars = {
           restaurants: data.rows,
         }
@@ -79,6 +77,7 @@ app.use("/api/lines", orderLineItemsRoutes(db));
       })
       .catch(error => console.log(error));
   })
+
 // load the checkout page NEEDS THE MISSING EJS FILE IN VIEWS FOLDER
 //   router.get("/", (req, res) => {
 //     res.render("checkout");
