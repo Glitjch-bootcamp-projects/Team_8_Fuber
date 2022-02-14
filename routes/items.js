@@ -9,6 +9,7 @@ const express = require('express');
 const router  = express.Router();
 
 module.exports = (db) => {
+
   router.get("/", (req, res) => {
     db.query(`SELECT * FROM items;`)
       .then(data => {
@@ -21,5 +22,9 @@ module.exports = (db) => {
           .json({ error: err.message });
       });
   });
+
+
+  
+  // do not delete
   return router;
 };

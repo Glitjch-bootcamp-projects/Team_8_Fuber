@@ -14,5 +14,7 @@ CREATE TABLE restaurants (
   date_joined DATE DEFAULT now(),
   date_ended DATE,
   rating INTEGER NOT NULL DEFAULT 0,
+  delivery_fee VARCHAR(55) DEFAULT 'free',
+  delivery_time INTEGER DEFAULT 30,
   active BOOLEAN DEFAULT TRUE
 );
