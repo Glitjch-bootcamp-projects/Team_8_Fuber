@@ -146,6 +146,12 @@ header {
     padding: 0.8rem 1rem;
     background: var(--color-grey);
     border-radius: 30px;
+    input {
+      font-weight: 300;
+      border: 0;
+      width: auto;
+      background-color: var(--color-grey);
+    }
   }
   .header-options {
     display: flex;
