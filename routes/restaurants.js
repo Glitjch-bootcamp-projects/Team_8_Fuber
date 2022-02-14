@@ -12,7 +12,7 @@ module.exports = (db) => {
   // loads restaurants page from index/home page
   router.get("/address", (req, res) => {
     console.log("api restaurant test migrating from server.js");
-    const getRestaurantsByAddress = `SELECT * FROM restaurants WHERE location LIKE $1 LIMIT 3;`;
+    const getRestaurantsByAddress = `SELECT * FROM restaurants WHERE location LIKE $1 LIMIT 6;`;
     const values = [req.query.address];
     // console.log('values', values);
     return db.query(getRestaurantsByAddress, values)

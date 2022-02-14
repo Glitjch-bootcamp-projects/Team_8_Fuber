@@ -1,7 +1,7 @@
 // Client facing scripts here
+const local = "http://localhost:8080";
 $(() => {
   console.log("app.js accessed");
-  const local = "http://localhost:8080";
 
   // Jacky
   //toggles schedule on main page
@@ -13,11 +13,6 @@ $(() => {
   $("#kebab-kingdom").on('click', (data) => {
     console.log("kebab-kingdom id accessed");
     window.location.href = `${local}/api/restaurants/menus/kebab-kingdom`;
-    
-    // $.ajax({
-    //   url: "/api/restaurants/menus/kebab-kingdom",
-    //   type: 'get'
-    // })
   });
 
   // testing submit form
