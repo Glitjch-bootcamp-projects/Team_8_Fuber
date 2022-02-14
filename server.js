@@ -60,47 +60,6 @@ app.use("/api/lines", orderLineItemsRoutes(db));
 
 // Note: mount other resources here, using the same pattern above
 
-// app.get("/address", (req, res) => { // base path 'address' to match class name, for now.
-//   const getRestaurantsByAddress = `SELECT * FROM restaurants WHERE location LIKE $1 LIMIT 3;`;
-//   const values = [req.query.address];
-//   console.log('values', values);
-//   return db.query(getRestaurantsByAddress, values)
-//     // .then(data => {
-//     //   const templateVars = {
-//     //     restaurants: data.rows,
-//     //   }
-//     //   db.query(`SELECT * FROM items LIMIT 3;`, (err, res) => {
-//     //     if (err) { 
-//     //       console.log(err);
-//     //     }
-//     //     console.log('query for items!!!!!!!!!', res.rows);
-//     //     return templateVars.items = res.rows
-//     //   })
-//     //   console.log('first promise ======', templateVars);
-//     //   return templateVars;
-//     // })
-//     .then(data => {
-//       console.log('consolelog',data);
-//       const templateVars = {
-//         restaurants: data.rows,
-//       }
-//       console.log("console log",templateVars);
-//       res.render("restaurants", templateVars);
-//     })
-//     .catch(error => console.log(error));
-// })
-
-// TESING TWO QUERIES -------------------------
-// app.get("/test", (req, res) => {
-//   console.log("HELLLLLOOOOOOO+++");
-//   return db.query(`SELECT * FROM restaurants WHERE location = 'vancouver';  SELECT * FROM items LIMIT 3;`)
-//     .then(data => {
-//       console.log("data from test ", data[0].rows, data[1].rows);
-//     })
-//     .catch(error => console.log(error))
-// });
-// --------------------------------------------
-
 // Home page
 // Warning: avoid creating more routes in this file!
 // Separate them into separate routes files (see above).

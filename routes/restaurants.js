@@ -9,25 +9,9 @@ const express = require('express');
 const router = express.Router();
 module.exports = (db) => {
 
-  const getRestaurantsByAddress = (req, res) => {
-    let query = `SELECT * FROM restaurants WHERE location LIKE $1;`;
-    const values = [req.query.address];
-    return db.query(query, values)
-      .then(data => {
-        console.log('++++++data.rows', data.rows);
-        return res.json({ data: data.rows })
-      })
-      .catch(error => console.log(error));
-  };
-
-
+  // loads restaurants page from index/home page
   router.get("/address", (req, res) => {
-    // console.log("routes getRestaurantsByAddress", getRestaurantsByAddress(req, res));
-    // return getRestaurantsByAddress(req, res)
-
     console.log("api restaurant test migrating from server.js");
-    // return res.render('restaurants.ejs')
-
     const getRestaurantsByAddress = `SELECT * FROM restaurants WHERE location LIKE $1 LIMIT 3;`;
     const values = [req.query.address];
     // console.log('values', values);
@@ -44,37 +28,59 @@ module.exports = (db) => {
   });
 
 
-  // not used for now----------------
-  // get all restaurants
-  router.get("/all-restaurants", (req, res) => {
-    db.query(`SELECT * FROM restaurants;`)
-      .then(data => {
-        const restaurants = data.rows;
-        res.json({ restaurants });
-      })
-      .catch(err => {
-        res
-          .status(500)
-          .json({ error: err.message });
-      });
-  });
-  // --------------------------------
-
-  // get restaurants from home based on address. Using simple filter e.g. include Vancouver, for now
-  router.get("/location-based", (req, res) => {
-    console.log("+++++++++location-based in routes");
-    console.log('++++++++req', req.query);
-    const getRestaurantsByAddress = `SELECT * FROM restaurants WHERE location LIKE $1;`;
-    const values = [req.query.address];
-    return db.query(getRestaurantsByAddress, values)
-      .then(data => {
-        console.log('++++++data.rows', data.rows);
-        res.json({ data: data.rows })
-      })
-      .catch(error => console.log(error));
+  // when user clicks on restaurant renders menu page
+  router.get("/menus/:id", (req, res) => {
+    const id = req.params.id;
+    console.log("id", id);
+    const templateVars = {
+      menus: id 
+    }
+    res.render("menus", templateVars);
   });
 
 
   // do not delete
   return router;
 };
+
+
+  // const getRestaurantsByAddress = (req, res) => {
+  //   let query = `SELECT * FROM restaurants WHERE location LIKE $1;`;
+  //   const values = [req.query.address];
+  //   return db.query(query, values)
+  //     .then(data => {
+  //       console.log('++++++data.rows', data.rows);
+  //       return res.json({ data: data.rows })
+  //     })
+  //     .catch(error => console.log(error));
+  // };
+
+
+    // // get all restaurants
+  // router.get("/all-restaurants", (req, res) => {
+  //   db.query(`SELECT * FROM restaurants;`)
+  //     .then(data => {
+  //       const restaurants = data.rows;
+  //       res.json({ restaurants });
+  //     })
+  //     .catch(err => {
+  //       res
+  //         .status(500)
+  //         .json({ error: err.message });
+  //     });
+  // });
+
+
+    // get restaurants from home based on address. Using simple filter e.g. include Vancouver, for now
+  // router.get("/location-based", (req, res) => {
+  //   console.log("+++++++++location-based in routes");
+  //   console.log('++++++++req', req.query);
+  //   const getRestaurantsByAddress = `SELECT * FROM restaurants WHERE location LIKE $1;`;
+  //   const values = [req.query.address];
+  //   return db.query(getRestaurantsByAddress, values)
+  //     .then(data => {
+  //       console.log('++++++data.rows', data.rows);
+  //       res.json({ data: data.rows })
+  //     })
+  //     .catch(error => console.log(error));
+  // });

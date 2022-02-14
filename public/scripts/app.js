@@ -1,6 +1,7 @@
 // Client facing scripts here
-
 $(() => {
+  console.log("app.js accessed");
+  const local = "http://localhost:8080";
 
   // Jacky
   //toggles schedule on main page
@@ -9,21 +10,15 @@ $(() => {
     $('#time').slideToggle();
   });
 
-  console.log("client.js touched");
-
-
-
-  // selects the restaurants
-  // const generateRestaurants = function () {
-  //   console.log('generating restaurants');
-  //   $.get("/api/restaurants/test", (req, res) => {
-  //     console.log('app.js generateRestaurants req', req);
-  //   })
-  //     .catch(error => console.log(error));
-  // }
-  // generateRestaurants();
-
-
+  $("#kebab-kingdom").on('click', (data) => {
+    console.log("kebab-kingdom id accessed");
+    window.location.href = `${local}/api/restaurants/menus/kebab-kingdom`;
+    
+    // $.ajax({
+    //   url: "/api/restaurants/menus/kebab-kingdom",
+    //   type: 'get'
+    // })
+  });
 
   // testing submit form
   $(".addressBtn").on('click', (data) => {
@@ -43,5 +38,17 @@ $(() => {
     })
   })
 
-
 });
+
+
+
+
+  // selects the restaurants
+  // const generateRestaurants = function () {
+  //   console.log('generating restaurants');
+  //   $.get("/api/restaurants/test", (req, res) => {
+  //     console.log('app.js generateRestaurants req', req);
+  //   })
+  //     .catch(error => console.log(error));
+  // }
+  // generateRestaurants();
