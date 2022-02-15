@@ -15,14 +15,9 @@ body {
   display: flex;
   flex-direction: column;
   box-shadow: 2px 2px 2px 2px #545454;
+  border-radius: 20px;
 }
 
-.cart-close {
-  i {
-    width: 100%;
-    height: 100%;
-  }
-}
 .cart-body {
   overflow-y: scroll;
   .header-title {

@@ -6,7 +6,7 @@
   --color-grey-darker: #545454;
 }
 
-.container {
+.header-container {
   width: calc(100% - 120px);
   margin: auto;
 }
@@ -23,7 +23,7 @@ header {
       }
     }
   }
-  .container {
+  .header-container {
   display: flex;
   align-items: center;
   justify-content: space-around;
