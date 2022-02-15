@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Füber Feasts</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/_header.css" type="text/css"/>
+
+    <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+    <script type="text/javascript" src="/scripts/app.js"></script>
+  </head>
+  <body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1>Füber<span>Feasts</span></h1>
+      </div>
+      <div class="currentDetails">
+        <div class="options">
+          <div class="container-delivery">
+            <button class="options-button-delivery selected">
+              Delivery
+            </button>
+            <button class="options-button-delivery">
+              Pick-up
+            </button>
+          </div>
+        </div>
+        <div class="header-options header-button">
+          <button>
+            <i data-feather="map-pin"></i>
+            401 W Georgia St
+          </button>
+        </div>
+      </div>
+      <div class="header-searchbar">
+        <i data-feather="search"></i>
+        <input type="text" placeholder="Search">
+      </div>
+      <div class="header-options">
+        <button class="options-cart-button">
+          <i data-feather="shopping-cart"></i>
+            Cart • 0
+          </button>
+      </div>
+        <div class="header-options header-button">
+          Sign in
+        </div>
+      </div>
+    </div>
+  </header>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    feather.replace()
+  </script>
+</body>
+</html>

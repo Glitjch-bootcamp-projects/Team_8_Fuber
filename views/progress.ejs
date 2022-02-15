@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Füber Feasts</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/progress.css" type="text/css"/>
+
+    <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+    <script type="text/javascript" src="/scripts/app.js"></script>
+  </head>
+  <body>
+
+    <%-include('partials/_header')%>
+
+    <div class="order-complete">
+      <span>You have successfully placed your order</span>
+      <div class="progress-bar">
+        <div class="waiting-to-accept completed">
+          Waiting for restaurant to accept order
+        </div>
+        <div class="order-preparing completed">
+          Restaurant is making your order
+        </div>
+        <div class="finalizing-order in-progress">
+          Restaurant is finalizing your order
+        </div>
+        <div class="order-delivering not-started">
+          Your order has been picked up and is being delivered
+        </div>
+        <div class="order-delivered not-started">
+          Your order has been successfully delivered
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      feather.replace()
+    </script>
+  </body>
+</html>
+

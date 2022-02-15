@@ -13,45 +13,9 @@
     <script type="text/javascript" src="/scripts/app.js"></script>
   </head>
   <body>
-    <header>
-      <div class="container">
-        <div class="logo">
-          <h1>Füber<span>Feasts</span></h1>
-        </div>
-        <div class="currentDetails">
-          <div class="options">
-            <div class="container-delivery">
-              <button class="options-button-delivery selected">
-                Delivery
-              </button>
-              <button class="options-button-delivery">
-                Pick-up
-              </button>
-            </div>
-          </div>
-          <div class="header-options header-button">
-            <button>
-              <i data-feather="map-pin"></i>
-              401 W Georgia St
-            </button>
-          </div>
-        </div>
-        <div class="header-searchbar">
-          <i data-feather="search"></i>
-          <input type="text" placeholder="Search">
-        </div>
-        <div class="header-options">
-          <button class="options-cart-button">
-            <i data-feather="shopping-cart"></i>
-              Cart • 0
-            </button>
-        </div>
-          <div class="header-options header-button">
-            Sign in
-          </div>
-        </div>
-      </div>
-    </header>
+
+    <%-include('partials/_header')%>
+
     <div class="checkout">
       <div class="user-info">
         <div class="checkout-container">
