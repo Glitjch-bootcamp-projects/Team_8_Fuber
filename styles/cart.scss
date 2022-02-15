@@ -1,0 +1,102 @@
+:root {
+  --font-family: sans-serif;
+  font-size: 16px;
+  --color-green: #02c167;
+  --color-grey: #eeeeee;
+  --color-grey-darker: #545454;
+}
+
+body {
+  font-family: sans-serif;
+  width: 432px;
+  max-height: 500px;
+  margin: 2rem;
+  border: #5451497c 4px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 2px 2px #545454;
+}
+
+.cart-close {
+  i {
+    width: 100%;
+    height: 100%;
+  }
+}
+.cart-body {
+  overflow-y: scroll;
+  .header-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    display: flex;
+    margin: 1rem 1rem 1rem 1rem;
+    flex-direction: column;
+  }
+  .cart-items {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    .item {
+      display: flex;
+      align-items: center;
+      margin: 0 1rem 0 1rem;
+      .item-quantity {
+        font-size: 1.3rem;
+        display: flex;
+        align-items: center;
+        width: 50px;
+        height: 30px;
+        padding: 6px 7px;
+        background: var(--color-grey);
+        border-radius: 30px;
+      }
+      .item-info {
+        display: flex;
+        font-size: 1rem;
+        align-content: center;
+        justify-content: space-between;
+        padding: 1rem 0 1rem 1rem;
+        width: -webkit-fill-available;
+        .item-name {
+          display: flex;
+          align-items: center;
+        }
+        .item-price {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+  .utensils {
+    background: var(--color-grey);
+    margin: 0 1rem 0 1rem;
+    width: 415px;
+    padding: 0.8rem 7.3rem 0.8rem 13px;
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+  .order-notes {
+    width: 399px;
+    margin: 1.6rem 0 1rem 1rem;
+    font-size: 1.2rem;
+    background: var(--color-grey);
+    padding: 0.8rem;
+    input {
+      font-weight: 300;
+      border: 0;
+      width: 373px;
+      background-color: var(--color-grey);
+    }
+  }
+  .checkout {
+    width: 399px;
+    display: flex;
+    justify-content: center;
+    margin: 0 1rem 1rem 1rem;
+    background: black;
+    color: white;
+    padding: 0.8rem ;
+    font-size: 1.2rem;
+  }
+}
