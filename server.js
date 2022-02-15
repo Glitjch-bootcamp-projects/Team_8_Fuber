@@ -7,6 +7,7 @@ const sassMiddleware = require("./lib/sass-middleware");
 const express = require("express");
 const app = express();
 const morgan = require("morgan");
+const bodyParser = require('body-parser');
 
 // PG database client/connection setup
 const { Pool } = require("pg");
@@ -18,9 +19,10 @@ db.connect();
 // 'dev' = Concise output colored by response status for development use.
 //         The :status token will be colored red for server error codes, yellow for client error codes, cyan for redirection codes, and uncolored for all other codes.
 app.use(morgan("dev"));
-
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false })); 
+app.use(bodyParser.json());
 
 app.use(
   "/styles",
@@ -64,12 +66,19 @@ app.use("/api/lines", orderLineItemsRoutes(db));
 
 // load the restaurants page NEEDS THE MISSING EJS FILE IN VIEWS FOLDER
   app.get("/address", (req, res) => { // base path 'address' to match class name, for now.
-    res.render("restaurants");
+    console.log(req);
+    const getRestaurantsByAddress = `SELECT * FROM restaurants WHERE location LIKE $1;`;
+    const values = [req.query.address];
+    return db.query(getRestaurantsByAddress, values)
+      .then(data => {
+        console.log('data', data.rows);
+        const templateVars = {
+          restaurants: data.rows,
+        }
+        res.render("restaurants", templateVars);
+      })
+      .catch(error => console.log(error));
   })
-    .then(() => {
-      
-    }) 
-
 // load the checkout page NEEDS THE MISSING EJS FILE IN VIEWS FOLDER
 //   router.get("/", (req, res) => {
 //     res.render("checkout");
