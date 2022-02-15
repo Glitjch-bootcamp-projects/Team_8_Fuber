@@ -1,5 +1,7 @@
 // Client facing scripts here
 
+const sendTwilio = require("../../lib/twilio");
+
 $(() => {
 
   // Jacky
@@ -109,6 +111,5 @@ $(() => {
     })
 
   })
-  // .then(() => generateRestaurants)
 
 });

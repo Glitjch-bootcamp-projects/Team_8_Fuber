@@ -8,6 +8,7 @@ const express = require("express");
 const app = express();
 const morgan = require("morgan");
 const bodyParser = require('body-parser');
+const twilio = require("./lib/twilio");
 
 // PG database client/connection setup
 const { Pool } = require("pg");
