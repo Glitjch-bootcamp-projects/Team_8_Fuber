@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Füber Feasts</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/_progress-bar.css" type="text/css"/>
+
+    <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+    <script type="text/javascript" src="/scripts/app.js"></script>
+  </head>
+  <body>
+    <div class="progress-container">
+      <input type="radio" class="radio" name="progress" value="order-received" id="order-received" checked>
+      <label for="order-received" class="label">Order received</label>
+
+      <input type="radio" class="radio" name="progress" value="making-order" id="making-order">
+      <label for="making-order" class="label">Making order</label>
+
+      <input type="radio" class="radio" name="progress" value="finalizing-order" id="finalizing-order">
+      <label for="finalizing-order" class="label">Finalizing order</label>
+
+      <input type="radio" class="radio" name="progress" value="picked-up" id="picked-up">
+      <label for="picked-up" class="label">Order picked up</label>
+
+      <input type="radio" class="radio" name="progress" value="order-delivered" id="order-delivered">
+      <label for="order-delivered" class="label">Order delivered</label>
+
+      <div class="progress">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+  </body>
+</html>
