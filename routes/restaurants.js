@@ -39,20 +39,54 @@ module.exports = (db) => {
   });
 
 
+  // restaurant template
+  const oneDollarRest = (data) => {
+    const template = `
+  <% for (let restaurant of ${data}) { %>
+    <div class="listings-grid-element <%= restaurant.price_range %>">
+      <div class="image">
+        <img src=<%=restaurant.image %> alt="Listing pic">
+      </div>
+      <div class="listings-text">
+        <div class="listings-text-title">
+          <h3>
+            <%= restaurant.name %>
+          </h3>
+          <div class="listings-info">
+            <span> $<%= restaurant.delivery_fee %> delivery fee • <%= restaurant.delivery_time %> min</span>
+          </div>
+        </div>
+        <div class="listings-rating">
+          <span>
+            <%= restaurant.rating %>
+          </span>
+        </div>
+      </div>
+    </div>
+    <% } %>
+    `
+    return template
+  };
+
+
   // when user clicks on $ then filter restaurants based on $
-  router.get("/one-dollar", (req, res)=> {
-    const query = `SELECT * FROM restaurants WHERE price_range = 1`;
+  router.get("/one-dollar", (req, res) => {
+    const query = `SELECT * FROM restaurants WHERE price_range = 1 LIMIT 6`;
     return db.query(query)
       .then(data => {
         let templateVars = {
           restaurants: data.rows
         }
-        return res.render("restaurants", templateVars);
+        // return templateVars;
+        console.log("hello");
+        // console.log("routes one dollar",oneDollarRest(data.rows));
+        return oneDollarRest(data.rows);
       })
       .catch(error => {
         console.log('error', error);
       })
   })
+
 
   // do not delete
   return router;

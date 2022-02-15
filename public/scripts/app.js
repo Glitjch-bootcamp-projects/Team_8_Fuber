@@ -56,16 +56,17 @@ $(() => {
   });
 
   // when user filters restaurant by clicking on $ button on side bar, restaurants filter
-  $("#one-dollar").on('click', () => {
-    alert("heh");
+  $(".one-dollar").on('click', () => {
     $("#kebab-kingdom").empty();
-    $.ajax({
-      url: "/api/restaurants/one-dollar",
-      type: 'get',
-      data: $("#one-dollar"),
-      success: data => console.log('data from app.js', data),
-      error: error => console.log(error)
-    })
+   return $.get("/api/restaurants/one-dollar", ()=>{}
+    // data: $(".one-dollar"),
+      // success: () => console.log('data from app.js'),
+      // error: error => console.log(error)
+    )
+      .then((data)=> {
+        return $("#kebab-kingdom").append(data);
+        // console.log("log", data);
+      })
   })
 
 
