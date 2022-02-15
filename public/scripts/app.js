@@ -49,24 +49,24 @@ $(() => {
     $('#time').slideToggle();
   });
 
-  // when user clicks on restaurant menu appears
-  $("#kebab-kingdom").on('click', (data) => {
-    console.log("kebab-kingdom id accessed");
-    window.location.href = `${local}/api/restaurants/menus/kebab-kingdom`;
-  });
+  // // when user clicks on restaurant menu appears
+  // $("#kebab-kingdom").on('click', (data) => {
+  //   console.log("kebab-kingdom id accessed");
+  //   window.location.href = `${local}/api/restaurants/menus/kebab-kingdom`;
+  // });
 
-  // when user filters restaurant by clicking on $ button on side bar, restaurants filter
-  $("#one-dollar").on('click', () => {
-    alert("heh");
-    $("#kebab-kingdom").empty();
-    $.ajax({
-      url: "/api/restaurants/one-dollar",
-      type: 'get',
-      data: $("#one-dollar"),
-      success: data => console.log('data from app.js', data),
-      error: error => console.log(error)
-    })
-  })
+  // // when user filters restaurant by clicking on $ button on side bar, restaurants filter
+  // $("#one-dollar").on('click', () => {
+  //   alert("heh");
+  //   $("#kebab-kingdom").empty();
+  //   $.ajax({
+  //     url: "/api/restaurants/one-dollar",
+  //     type: 'get',
+  //     data: $("#one-dollar"),
+  //     success: data => console.log('data from app.js', data),
+  //     error: error => console.log(error)
+  //   })
+  // })
 
 
   // testing submit form
