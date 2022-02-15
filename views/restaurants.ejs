@@ -164,7 +164,7 @@
       </div>
       <div class="listings-grid" id="kebab-kingdom">
         <% for (let restaurant of restaurants) { %>
-          <div class="listings-grid-element">
+          <div class="listings-grid-element <%= restaurant.price_range %>">
             <div class="image">
               <img src=<%=restaurant.image %> alt="Listing pic">
             </div>
