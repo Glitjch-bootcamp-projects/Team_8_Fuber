@@ -1,0 +1,75 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url(../images/mainPage.jpg);
+}
+
+main {
+  margin-top: 300px;
+}
+
+.frontPageTitle {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  color: white;
+  text-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.35);
+  font-size: 72px;
+}
+
+.addressBarTime {
+  display: flex;
+  flex-direction: row;
+}
+
+.addressBar {
+  height: 50px;
+  width: 700px;
+}
+
+.Time {
+  display: flex;
+  flex-direction: row;
+}
+
+#time {
+  display: none;
+  width: 400px;
+  text-align: center;
+}
+
+#date {
+  display: none;
+  width: 400px;
+  text-align: center;
+}
+
+.addressBtn {
+  display: block;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+  background-color: brown;
+  text-align: center;
+  transition: all 0.15s;
+  color: white;
+  width: 800px;
+  height: 50px;
+}
+
+.addressBtn:hover {
+  text-shadow: 0 0 2em white;
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+  background-color: #e29a15;
+}
+
+.Schedule {
+  width: 100px;
+  margin-left: 0 px;
+  height: 50px;
+}
