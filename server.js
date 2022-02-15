@@ -58,31 +58,7 @@ app.use("/api/items", itemsRoutes(db));
 app.use("/api/statuses", orderStatusesRoutes(db));
 app.use("/api/lines", orderLineItemsRoutes(db));
 
-// app.use("/api/place-order", placeOrderRoutes(db));
-// app.use("/api/checkout", checkoutRoutes(db));
-
 // Note: mount other resources here, using the same pattern above
-
-
-// load the restaurants page NEEDS THE MISSING EJS FILE IN VIEWS FOLDER
-  app.get("/address", (req, res) => { // base path 'address' to match class name, for now.
-    console.log(req);
-    const getRestaurantsByAddress = `SELECT * FROM restaurants WHERE location LIKE $1;`;
-    const values = [req.query.address];
-    return db.query(getRestaurantsByAddress, values)
-      .then(data => {
-        console.log('data', data.rows);
-        const templateVars = {
-          restaurants: data.rows,
-        }
-        res.render("restaurants", templateVars);
-      })
-      .catch(error => console.log(error));
-  })
-// load the checkout page NEEDS THE MISSING EJS FILE IN VIEWS FOLDER
-//   router.get("/", (req, res) => {
-//     res.render("checkout");
-// });
 
 // Home page
 // Warning: avoid creating more routes in this file!
