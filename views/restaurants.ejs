@@ -13,58 +13,59 @@
   <script type="text/javascript" src="/scripts/app.js"></script>
 </head>
 
-  <body>
-    <!-- Side Bar -->
-      <div class="sidebar">
-        <div class="sidebar-header">
-          All Stores
-        </div>
-        <div class="sidebar-subheader">
-          Sort
-        </div>
-        <div class="sidebar-text">
-          <span><i class="icon" data-feather="thumbs-up"></i>Picked for you</span>
-          <span><i class="icon" data-feather="heart"></i>Most popular</span>
-          <span><i class="icon" data-feather="star"></i>Rating</span>
-          <span><i class="icon" data-feather="clock"></i></img>Delivery time</span>
-        </div>
-        <div class="sidebar-subheader">
-          Price range
-        </div>
-        <div class="sidebar-price">
-          <button id="p1" type="button">$</button>
-          <button id="p2" type="button">$$</button>
-          <button id="p3" type="button">$$$</button>
-          <button id="p4" type="button">$$$$</button>
-        </div>
-        <div class="sidebar-price-range">
-          Max. Delivery Fee
-        </div>
-        <div class="sidebar-slide-container">
-          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-        </div>
-        <div class="sidebar-price-range-points">
-          <span>$1</span>
-          <span>$3</span>
-          <span>$5+</span>
-        </div>
-        <div class="sidebar-subheader">
-          Dietary
-        </div>
-        <div class="sidebar-dietary">
-          <span><i class="icon" data-feather="feather"></i>Vegetarian</span>
-          <span><i class="icon" data-feather="heart"></i>Vegan</span>
-          <span><img class="icon" src="https://cdn-icons-png.flaticon.com/128/1167/1167712.png"></img>Allergy friendly</span>
-          <span><img class="icon" src="https://cdn-icons.flaticon.com/png/128/2276/premium/2276190.png?token=exp=1644666005~hmac=2ef90f4c7b0b4a23d544a14afe0417d1"></img>Gluten-free</span>
-          <span><img class="icon" src="https://cdn-icons.flaticon.com/png/128/5862/premium/5862723.png?token=exp=1644665912~hmac=c80e236303102da9c4c38568a4927f6a"></img>Keto</span>
-        </div>
-      </div>
+<body>
+  <!-- Side Bar -->
+  <div class="sidebar">
+    <div class="sidebar-header">
+      All Stores
+    </div>
+    <div class="sidebar-subheader">
+      Sort
+    </div>
+    <div class="sidebar-text">
+      <span><i class="icon" data-feather="thumbs-up"></i>Picked for you</span>
+      <span><i class="icon" data-feather="heart"></i>Most popular</span>
+      <span><i class="icon" data-feather="star"></i>Rating</span>
+      <span><i class="icon" data-feather="clock"></i></img>Delivery time</span>
+    </div>
+    <div class="sidebar-subheader">
+      Price range
+    </div>
+    <div class="sidebar-price">
+      <span id="one-dollar">$</span>
+      <span>$$</span>
+      <span>$$$</span>
+      <span>$$$$</span>
+    </div>
+    <div class="sidebar-price-range">
+      Max. Delivery Fee
+    </div>
+    <div class="sidebar-slide-container">
+      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+    </div>
+    <div class="sidebar-price-range-points">
+      <span>$1</span>
+      <span>$3</span>
+      <span>$5+</span>
+    </div>
+    <div class="sidebar-subheader">
+      Dietary
+    </div>
+    <div class="sidebar-dietary">
+      <span><i class="icon" data-feather="feather"></i>Vegetarian</span>
+      <span><i class="icon" data-feather="heart"></i>Vegan</span>
+      <span><img class="icon" src="https://cdn-icons-png.flaticon.com/128/1167/1167712.png"></img>Allergy
+        friendly</span>
+      <span><img class="icon"
+          src="https://cdn-icons.flaticon.com/png/128/2276/premium/2276190.png?token=exp=1644666005~hmac=2ef90f4c7b0b4a23d544a14afe0417d1"></img>Gluten-free</span>
+      <span><img class="icon"
+          src="https://cdn-icons.flaticon.com/png/128/5862/premium/5862723.png?token=exp=1644665912~hmac=c80e236303102da9c4c38568a4927f6a"></img>Keto</span>
+    </div>
+  </div>
   </div>
 
+  <!-- Header -->
   <%-include('partials/_header')%>
-
-  <!-- Options -->
-
 
   <!-- Orders Near You -->
   <div class="listings">
