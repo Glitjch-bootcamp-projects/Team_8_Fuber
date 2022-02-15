@@ -33,11 +33,26 @@ module.exports = (db) => {
     const id = req.params.id;
     console.log("id", id);
     const templateVars = {
-      menus: id 
+      menus: id
     }
     res.render("menus", templateVars);
   });
 
+
+  // when user clicks on $ then filter restaurants based on $
+  router.get("/one-dollar", (req, res)=> {
+    const query = `SELECT * FROM restaurants WHERE price_range = 1`;
+    return db.query(query)
+      .then(data => {
+        let templateVars = {
+          restaurants: data.rows
+        }
+        return res.render("restaurants", templateVars);
+      })
+      .catch(error => {
+        console.log('error', error);
+      })
+  })
 
   // do not delete
   return router;
