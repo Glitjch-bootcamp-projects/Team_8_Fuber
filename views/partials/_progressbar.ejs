@@ -32,5 +32,21 @@
         <div class="progress-bar"></div>
       </div>
     </div>
+    <script>
+      window.onload = function() {
+        setTimeout(function() {
+          document.getElementById('making-order').click();
+        }, 5000);
+        setTimeout(function() {
+          document.getElementById('finalizing-order').click();
+        }, 10000);
+        setTimeout(function() {
+          document.getElementById('picked-up').click();
+        }, 15000);
+        setTimeout(function() {
+          document.getElementById('order-delivered').click();
+        }, 20000);
+      };
+    </script>
   </body>
 </html>

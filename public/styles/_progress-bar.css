@@ -8,14 +8,15 @@
 
 .progress-container {
   margin: 60px auto;
-  width: 70%;
+  width: 62%;
   text-align: center;
   background-color: var(--color-grey);
+  box-shadow: 2px 2px 2px 2px #545454;
 }
 
 .progress-container .progress {
   margin: 0 auto;
-  width: 70%;
+  width: 90%;
 }
 
 .progress {
@@ -57,7 +58,7 @@
 
 #order-delivered:checked ~ .progress > .progress-bar {
   width: 100%;
-  background-color: #86e01e;
+  background-color: var(--color-green);
 }
 
 .radio {
@@ -68,8 +69,7 @@
   display: inline-block;
   margin: 0 5px 20px;
   padding: 3px 8px;
-  color: #aaa;
-  text-shadow: 0 1px black;
+  color: var(--color-grey-darker);
   border-radius: 3px;
   cursor: pointer;
 }
@@ -78,4 +78,3 @@
   color: white;
   background: rgba(0, 0, 0, 0.25);
 }
-

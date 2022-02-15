@@ -89,7 +89,7 @@ header .header-button {
   background: var(--color-grey);
 }
 header .header-button button {
-  font-size: 0.8rem;
+  font-size: 1rem;
   padding: 0;
   border: 0;
   display: flex;

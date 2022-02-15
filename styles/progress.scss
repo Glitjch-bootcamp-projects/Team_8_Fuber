@@ -10,3 +10,95 @@ body {
   font-family: sans-serif;
 }
 
+.order-header {
+  margin: 5rem 5rem 0 5rem;
+  display: flex;
+  font-size: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: 400;
+  .order-subheader {
+    margin: 1rem 1rem 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+}
+
+.cart-body {
+  overflow-y: scroll;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 34%;
+  width: 33%;
+  position: fixed;
+  bottom: 10%;
+  right: 33%;
+  background: var(--color-grey);
+  box-shadow: 2px 2px 2px 2px #545454;
+  .header-title {
+    font-size: 1.7rem;
+    font-weight: 500;
+    display: flex;
+    margin: 1rem 1rem 1rem 1rem;
+    flex-direction: column;
+    font-weight: 400;
+  }
+  .cart-items {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    justify-content: space-around;
+    .item {
+      display: flex;
+      align-items: center;
+      margin: 0 1rem 0 1rem;
+      justify-content: space-around;
+      width: 100%;
+      .item-quantity {
+        font-size: 1.3rem;
+        display: flex;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        padding: 6px 7px;
+        background: var(--color-grey);
+        border-radius: 30px;
+      }
+      .item-info {
+        display: flex;
+        font-size: 1rem;
+        width: 100%;
+        align-content: center;
+        justify-content: space-between;
+        padding: 1rem 0 1rem 1rem;
+        .item-name {
+          display: flex;
+          align-items: center;
+        }
+        .item-price {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+.total-price {
+  position: fixed;
+  bottom: 28px;
+  right: 33%;
+  font-size: 2rem;
+  font-weight: 400;
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  height: 7%;
+  align-items: center;
+  background: var(--color-grey);
+  box-shadow: 2px 2px 2px 2px #545454;
+}
