@@ -8,6 +8,6 @@ CREATE TABLE items (
   description TEXT,
   type VARCHAR(100) NOT NULL,
   price INTEGER NOT NULL,
-  image VARCHAR(100) NOT NULL,
+  image VARCHAR(1000) NOT NULL,
   available BOOLEAN DEFAULT TRUE
 );
