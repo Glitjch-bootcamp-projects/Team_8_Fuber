@@ -18,6 +18,9 @@ $(() => {
           </div>
         </div>
       </div>
+      <script>
+        feather.replace()
+      </script>
     `
     return $itemTemplate;
   };
