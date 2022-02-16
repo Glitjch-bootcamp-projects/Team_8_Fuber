@@ -38,16 +38,23 @@ $(() => {
         }
       }
     };
-    // stretch: sort them out based on type
 
+    // modifies the checkout cost button
+    const addTotalCart = function (price) {
+      console.log("addTotalCart",      $(".cart-checkout-total").text());
+      const originalTotal =  Number($(".cart-checkout-total").text());
+      const newTotal = Number(price);
+      $(".cart-checkout-total").text(`${originalTotal + newTotal / 100}`)
+    };
+    // calculates total based on item added
 
 
     $.ajax({
       url: "/api/cart/add-items",
       method: "GET",
       success: function (result) {
-        console.log("awax");
-        appendItems(result.items)
+        appendItems(result.items);
+        addTotalCart(result.items[0].price);
       },
       error: function (err) {
         console.log("error", err);
