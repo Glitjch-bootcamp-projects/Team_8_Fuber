@@ -72,7 +72,7 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.sidebar .sidebar-price span {
+.sidebar .sidebar-price button {
   display: flex;
   justify-content: center;
   border: 0;
@@ -82,7 +82,7 @@ body {
   border-radius: 30px;
   margin: 0.5rem 0.25rem 0 0;
 }
-.sidebar .sidebar-price span:hover {
+.sidebar .sidebar-price button:hover {
   background: var(--color-grey-darker);
   color: var(--color-grey);
   transition-timing-function: ease-in-out;
