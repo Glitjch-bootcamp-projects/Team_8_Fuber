@@ -16,7 +16,7 @@ body {
 .cart-body {
   overflow-y: scroll;
   width: 432px;
-  background: #d8d5d5;
+  background: white;
   right: 10%;
   top: 10%;
 }
@@ -103,6 +103,7 @@ body {
   top: 9%;
   overflow: auto; /* Enable scroll if needed */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  box-shadow: 4px 4px 4px 4px #5451497c;
 }
 /* Modal Content */
 .modal-content {
@@ -119,7 +120,7 @@ body {
   font-size: 28px;
   font-weight: bold;
   padding: 0 405px 10px 10px;
-  background: #d8d5d5;
+  background: white;
 }
 
 .close:hover,
