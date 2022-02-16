@@ -3,6 +3,20 @@
 
 $(() => {
 
+  $('.changeAddressBtn').click(function() {
+    $("#modaljacky").css("transform", "scale(1)");
+    $("#overlay").css("opacity", "1");
+  })
+
+  $('.closeBtn').click(function() {
+    $("#modaljacky").css("transform", "scale(0)");
+    $("#overlay").css("opacity", "0");
+  })
+
+  $('.addressBar').keyup(function () {
+    $(".changeAddressBtn").text($(this).val());
+  });
+
   // Jacky
   //toggles schedule on main page
   $('.Schedule').click(function () {

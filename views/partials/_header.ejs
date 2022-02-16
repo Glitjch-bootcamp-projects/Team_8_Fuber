@@ -14,7 +14,7 @@
           </button>
         </div>
       </div>
-      <div class="header-options header-button">
+      <div class="header-options header-button changeAddressBtn">
         <button>
           <i data-feather="map-pin"></i>
           Vancouver
@@ -39,7 +39,23 @@
       <span class="close">&times;</span>
       <%-include('./_cart')%>
     </div>
-
+    <!-- jacky -->
+    <div id="modaljacky">
+      <div class="modal-header-jacky">
+        <div class ='title'>Change Address</div>
+        <button class='closeBtn'>&times;</button>
+      </div>
+      <div class="modal-body-jacky">
+        <form action = '/api/restaurants/address' method="GET">
+          <div class="addressBarTime">
+            <input class='addressBar' type="address" name="address" id="address">
+            <button class='addressBtn' type="submit">Change</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="overlay"></div>
+    <!-- jacky -->
     <script>
       // Get the modal
       var modal = document.getElementById("cart-modal");
@@ -72,3 +88,4 @@
 <script>
   feather.replace()
 </script>
+
