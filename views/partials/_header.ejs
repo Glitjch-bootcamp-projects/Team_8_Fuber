@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-  <head>
-    <title>Füber Feasts</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
-    <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/_header.css" type="text/css"/>
-
-    <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
-    <script type="text/javascript" src="/scripts/app.js"></script>
-  </head>
-  <body>
   <header>
     <div class="header-container">
       <div class="logo">
@@ -43,7 +29,9 @@
       <div class="header-options">
         <button class="options-cart-button">
           <i data-feather="shopping-cart"></i>
-            Cart • 0
+            <div id="cart-counter">
+              Cart • 0
+            </div>
           </button>
       </div>
         <div class="header-options header-button">
@@ -56,5 +44,3 @@
   <script>
     feather.replace()
   </script>
-</body>
-</html>

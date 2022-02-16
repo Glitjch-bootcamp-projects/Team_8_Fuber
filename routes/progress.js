@@ -7,25 +7,30 @@
 
 const express = require('express');
 const sendTwilio = require('../lib/twilio');
-const router  = express.Router();
+const router = express.Router();
 
 module.exports = (db) => {
 
- // load progress page
- router.get("/", (req, res) => {
-  sendTwilio();
-  res.render("progress");
-});
+  // load progress page
+  router.get("/", (req, res) => {
+    sendTwilio();
+    res.render("progress");
+  });
 
-// setting up for second message
- router.get("/order-ready", (req, res) => {
-  return sendTwilio("YOUR ORDER IS READY");
-});
+  // setting up for second message
+  router.get("/order-ready", (req, res) => {
+    sendTwilio("FüBer notice: your food is ready for delivery!");
+    res.end()
+  });
+  router.get("/order-delivered", (req, res) => {
+    sendTwilio("FüBer notice: your FüBer feast has arrived. Dig in!");
+    res.end()
+  });
 
-// testing twilio
-  router.get("/twilio", (req, res) =>{
+  // testing twilio
+  router.get("/twilio", (req, res) => {
     const twilioMessage = sendTwilio();
-    console.log("twilio message",twilioMessage);
+    console.log("twilio message", twilioMessage);
 
     return;
   });
