@@ -13,9 +13,9 @@ $(() => {
     $("#overlay").css("opacity", "0");
   })
 
-  $('.addressBar').keyup(function () {
-    $(".changeAddressBtn").text($(this).val());
-  });
+  // $('.addressBar').keyup(function () {
+  //   $(".changeAddressBtn").text($(this).val());
+  // });
 
   // Jacky
   //toggles schedule on main page
