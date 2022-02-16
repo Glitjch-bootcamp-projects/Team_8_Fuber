@@ -5,7 +5,7 @@ $(() => {
   const createItems = function (item) {
     console.log("create item");
     const $itemTemplate = `
-     <div class="item-grid ">
+      <div class="item-grid ">
         <div class="item">${item.name}
           <span class="item-description">$${item.price / 100} | ${item.description}</span>
         </div>
@@ -13,15 +13,19 @@ $(() => {
           <i data-feather="plus-circle"></i>
         </div>
       </div>
+      <script src="https://unpkg.com/feather-icons"></script>
       <script>
       feather.replace()
-    </script>
+      </script>
      `
     return $itemTemplate;
   }
   // add items to the container
   const appendItems = function (items) {
     console.log("append items");
+    $(".menu-items.kebabs").append(
+    '<script type="text/javascript" src="/scripts/add-to-cart.js"></script>'
+    )
     for (const item of items) {
       if (item.type === "kebabs") {
         $(".menu-items.kebabs").append(

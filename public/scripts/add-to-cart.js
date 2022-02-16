@@ -26,10 +26,10 @@ $(() => {
   };
 
   $('.feather-plus-circle').click(function () {
-
+    console.log("add-to-cart");
     // add items to the container
     const appendItems = function (items) {
-      console.log("append items");
+      console.log("add-to-cart append items");
       for (const item of items) {
         if (item.name === "Chicken Kebab") {
           $(".cart-items").append(
@@ -40,13 +40,6 @@ $(() => {
     };
     // stretch: sort them out based on type
 
-    const cartCounter = function () {
-      let i = 1;
-      $('.feather-plus-circle').click(function () {
-        const $count = $('#cart-counter')
-        $count.text(`Cart • ${i++}`)
-      })
-    };
 
 
     $.ajax({
@@ -55,7 +48,6 @@ $(() => {
       success: function (result) {
         console.log("awax");
         appendItems(result.items)
-        cartCounter();
       },
       error: function (err) {
         console.log("error", err);
