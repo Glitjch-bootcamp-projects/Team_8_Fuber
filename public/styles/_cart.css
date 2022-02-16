@@ -8,12 +8,8 @@
 
 body {
   font-family: sans-serif;
-  width: 432px;
   max-height: 500px;
-  margin: 2rem;
   border: #5451497c 4px;
-  display: flex;
-  flex-direction: column;
   box-shadow: 2px 2px 2px 2px #545454;
   border-radius: 20px;
 }
