@@ -176,7 +176,7 @@
                   <%= restaurant.name %>
                 </h3>
                 <div class="listings-info">
-                  <span> $<%= restaurant.delivery_fee %> delivery fee • <%= restaurant.delivery_time %> min</span>
+                  <span> $<%= restaurant.delivery_fee / 100 %> delivery fee • <%= restaurant.delivery_time - 15 %>-<%= restaurant.delivery_time %> min</span>
                 </div>
               </div>
               <div class="listings-rating">
