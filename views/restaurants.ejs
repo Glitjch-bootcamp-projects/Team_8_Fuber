@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
   <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
   <link rel="stylesheet" href="/styles/restaurants.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/_header.css" type="text/css"/>
-  <link rel="stylesheet" href="/styles/_progress-bar.css" type="text/css"/>
+  <link rel="stylesheet" href="/styles/_header.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/_progress-bar.css" type="text/css" />
 
   <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
   <script type="text/javascript" src="/scripts/app.js"></script>
@@ -66,7 +66,9 @@
   </div>
   </div>
 
- <%-include('partials/_header')%>
+  <div id="header-div">
+    <%-include('partials/_header')%>
+  </div>
   <!-- Options -->
 
 
@@ -92,7 +94,9 @@
       <div class="listings-grid">
         <div class="listings-grid-element">
           <div class="image">
-            <img src="https://images.unsplash.com/photo-1598866594230-a7c12756260f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1608&q=80" alt="Listing pic">
+            <img
+              src="https://images.unsplash.com/photo-1598866594230-a7c12756260f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1608&q=80"
+              alt="Listing pic">
           </div>
           <div class="listings-text">
             <div class="listings-text-title">
@@ -108,7 +112,9 @@
         </div>
         <div class="listings-grid-element">
           <div class="image">
-            <img src="https://images.unsplash.com/photo-1596662951482-0c4ba74a6df6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="Listing pic">
+            <img
+              src="https://images.unsplash.com/photo-1596662951482-0c4ba74a6df6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+              alt="Listing pic">
           </div>
           <div class="listings-text">
             <div class="listings-text-title">
@@ -124,7 +130,9 @@
         </div>
         <div class="listings-grid-element">
           <div class="image">
-            <img src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80" alt="Listing pic">
+            <img
+              src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
+              alt="Listing pic">
           </div>
           <div class="listings-text">
             <div class="listings-text-title">
@@ -176,7 +184,8 @@
                   <%= restaurant.name %>
                 </h3>
                 <div class="listings-info">
-                  <span> $<%= restaurant.delivery_fee / 100 %> delivery fee • <%= restaurant.delivery_time - 15 %>-<%= restaurant.delivery_time %> min</span>
+                  <span> $<%= restaurant.delivery_fee / 100 %> delivery fee • <%= restaurant.delivery_time - 15 %>-<%=
+                          restaurant.delivery_time %> min</span>
                 </div>
               </div>
               <div class="listings-rating">
