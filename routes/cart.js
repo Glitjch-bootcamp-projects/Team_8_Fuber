@@ -12,7 +12,7 @@ module.exports = (db) => {
 
  // load cart page
  router.get("/", (req, res) => {
-  res.render("_cart");
+  res.render("../views/partials/_cart");
 });
 
 
