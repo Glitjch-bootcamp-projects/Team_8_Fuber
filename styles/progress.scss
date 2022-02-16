@@ -28,7 +28,7 @@ body {
   }
 }
 
-.cart-body {
+.checkout-body {
   overflow-y: scroll;
   display: flex;
   align-items: center;
@@ -48,7 +48,7 @@ body {
     flex-direction: column;
     font-weight: 400;
   }
-  .cart-items {
+  .checkout-items {
     display: flex;
     flex-direction: column;
     padding-bottom: 1rem;

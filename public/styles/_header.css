@@ -16,6 +16,7 @@ header {
 }
 header .logo {
   padding-right: 10px;
+  cursor: pointer;
 }
 header .logo h1 {
   font-weight: 300;
@@ -37,6 +38,7 @@ header .container-delivery {
   padding: 6px 7px;
   background: var(--color-grey);
   border-radius: 30px;
+  cursor: pointer;
 }
 header .header-searchbar {
   margin: auto;
@@ -77,6 +79,7 @@ header .header-options .options-cart-button {
   letter-spacing: 0.6px;
   background: black;
   color: white;
+  cursor: pointer;
 }
 header .header-button {
   padding: 0.8rem 1rem;
@@ -87,6 +90,7 @@ header .header-button {
   font-family: var(--font-family);
   letter-spacing: 0.6px;
   background: var(--color-grey);
+  cursor: pointer;
 }
 header .header-button button {
   font-size: 1rem;
@@ -94,6 +98,7 @@ header .header-button button {
   border: 0;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 header .currentDetails, header .searchBar {
   display: flex;
@@ -115,6 +120,7 @@ header .options .options-button {
 header .options .options-button.selected {
   background: black;
   color: white;
+  cursor: pointer;
 }
 header .options .options-button-delivery {
   padding: 0.5rem 0.5rem;
@@ -125,10 +131,12 @@ header .options .options-button-delivery {
   letter-spacing: 0.6px;
   background: var(--color-grey);
   border: 0;
+  cursor: pointer;
 }
 header .options .options-button-delivery.selected {
   border-radius: 30px;
   padding-top: 10px;
   background: white;
   color: black;
+  cursor: pointer;
 }
