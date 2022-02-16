@@ -49,6 +49,7 @@ const finalPageRoutes = require("./routes/final");
 const checkoutRoutes = require("./routes/checkout");
 const cartRoutes = require("./routes/cart");
 const progressRoutes = require("./routes/progress");
+const menusRoutes = require("./routes/menus");
 
 // const placeOrderRoutes = require("./routes/place-order")
 // const checkoutRoutes = require("./routes/checkout")
@@ -66,6 +67,7 @@ app.use("/api/final", finalPageRoutes(db));
 app.use("/api/checkout", checkoutRoutes(db));
 app.use("/api/cart", cartRoutes(db));
 app.use("/api/progress", progressRoutes(db));
+app.use("/api/menus", menusRoutes(db));
 
 // Note: mount other resources here, using the same pattern above
 
