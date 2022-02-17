@@ -26,10 +26,10 @@ $(() => {
   };
 
   $('.feather-plus-circle').click(function () {
-
+    console.log("add-to-cart");
     // add items to the container
     const appendItems = function (items) {
-      console.log("append items");
+      console.log("add-to-cart append items");
       for (const item of items) {
         if (item.name === "Chicken Kebab") {
           $(".cart-items").append(
@@ -38,24 +38,20 @@ $(() => {
         }
       }
     };
-    // stretch: sort them out based on type
 
-    const cartCounter = function () {
-      let i = 1;
-      $('.feather-plus-circle').click(function () {
-        const $count = $('#cart-counter')
-        $count.text(`Cart • ${i++}`)
-      })
+    // modifies the checkout cost button
+    const addTotalCart = function (price) {
+      console.log("addTotalCart",      $(".cart-checkout-total").text());
+      const originalTotal =  Number($(".cart-checkout-total").text());
+      const newTotal = Number(price);
+      $(".cart-checkout-total").text((originalTotal + newTotal / 100).toFixed(2))
     };
-
-
     $.ajax({
       url: "/api/cart/add-items",
       method: "GET",
       success: function (result) {
-        console.log("awax");
-        appendItems(result.items)
-        cartCounter();
+        appendItems(result.items);
+        addTotalCart(result.items[0].price);
       },
       error: function (err) {
         console.log("error", err);
