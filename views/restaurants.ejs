@@ -10,9 +10,13 @@
   <link rel="stylesheet" href="/styles/restaurants.css" type="text/css" />
   <link rel="stylesheet" href="/styles/_header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/_progress-bar.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/_popupA.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/_cart.css" type="text/css"/>
 
   <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
   <script type="text/javascript" src="/scripts/app.js"></script>
+  <script type="text/javascript" src="/scripts/add-to-cart.js"></script>
+  <script type="text/javascript" src="/scripts/change-address.js"></script>
 </head>
 
 <body id="body-tj">
@@ -172,7 +176,7 @@
           </div>
         </div>
       </div>
-      <div class="listings-grid" id="kebab-kingdom">
+      <div class="listings-grid rest-container" id="kebab-kingdom">
         <% for (let restaurant of restaurants) { %>
           <div class="listings-grid-element <%= restaurant.price_range %>">
             <div class="image">
