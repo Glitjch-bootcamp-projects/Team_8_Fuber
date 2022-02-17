@@ -10,7 +10,7 @@ body {
   cursor: default;
 }
 
-.checkout {
+.checkout-body {
   display: flex;
   flex-wrap: wrap;
   margin: 1rem 0 0 0;

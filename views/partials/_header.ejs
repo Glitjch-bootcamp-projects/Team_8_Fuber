@@ -1,7 +1,7 @@
 <header id="header-tj">
   <div class="header-container">
     <div class="logo">
-        <a href="/"><h1>Füber<span>Feasts</span></h1></a>
+        <a href="/" style="text-decoration: none;"><h1 style="color:black;">Füber<span>Feasts</span></h1></a>
     </div>
     <div class="currentDetails">
       <div class="options">
@@ -42,14 +42,14 @@
 
     <div class="modal" id="modal">
       <div class="modal-header">
+        <button class='closeBtn'>&times;</button>
         <div class ='title'>Change Address</div>
-        <button class='closeBtn' style="border: 0; background: white; font-weight: bold; cursor: pointer;">&times;</button>
       </div>
       <div class="modal-body">
         <form action = '/api/restaurants/address' method="GET">
           <div class="addressBarTime">
-            <input class='addressBar' type="address" name="address" id="address" placeholder="Enter city" autofocus>
-            <button class='addressBtn' type="submit"  style="border: 0; background: white; cursor: pointer;">Change</button>
+            <input class='addressBar' type="address" name="address" id="address" placeholder="New address" autofocus>
+            <button class='addressBtn' type="submit">Change</button>
           </div>
         </form>
       </div>
@@ -80,7 +80,7 @@
       <!-- TODO -->
 
     <div class="header-options header-button">
-      user@user.com
+      admin@fuberfeasts.ca
     </div>
   </div>
   </div>
