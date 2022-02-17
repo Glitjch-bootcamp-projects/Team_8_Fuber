@@ -1,5 +1,7 @@
 //add items from menu to cart
 
+// const { ModelBuildPage } = require("twilio/lib/rest/autopilot/v1/assistant/modelBuild");
+
 $(() => {
 
   // create each item for ejs
@@ -26,10 +28,8 @@ $(() => {
   };
 
   $('.feather-plus-circle').click(function () {
-    console.log("add-to-cart");
     // add items to the container
     const appendItems = function (items) {
-      console.log("add-to-cart append items");
       for (const item of items) {
         if (item.name === "Chicken Kebab") {
           $(".cart-items").append(
@@ -41,17 +41,27 @@ $(() => {
 
     // modifies the checkout cost button
     const addTotalCart = function (price) {
-      console.log("addTotalCart",      $(".cart-checkout-total").text());
-      const originalTotal =  Number($(".cart-checkout-total").text());
+      const originalTotal = Number($(".cart-checkout-total").text());
       const newTotal = Number(price);
       $(".cart-checkout-total").text((originalTotal + newTotal / 100).toFixed(2))
     };
+
     $.ajax({
       url: "/api/cart/add-items",
       method: "GET",
       success: function (result) {
         appendItems(result.items);
         addTotalCart(result.items[0].price);
+        // send cart info to database
+        $.ajax({
+          url: "/api/cart",
+          method: "POST",
+          data: result.items[0],
+        })
+          .then((result) => {
+            console.log("TJ add-to-cart ajax post result", result)
+          })
+          .catch(error => { console.log(error) })
       },
       error: function (err) {
         console.log("error", err);

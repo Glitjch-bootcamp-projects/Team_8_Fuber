@@ -18,8 +18,8 @@ $(() => {
   // Jacky
   //toggles schedule on main page
   $('.Schedule').click(function () {
-    $('#date input').slideToggle();
-    $('#time input').slideToggle();
+    $('#date').slideToggle();
+    $('#time').slideToggle();
   });
 
   $('#p1').click(function () {

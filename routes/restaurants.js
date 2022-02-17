@@ -34,10 +34,8 @@ module.exports = (db) => {
   router.get("/update-address", (req, res) => {
     const getRestaurantsByAddress = `SELECT * FROM restaurants WHERE location LIKE $1 LIMIT 6;`;
     const values = [req.query.address];
-    // console.log("TJ values", values);
     return db.query(getRestaurantsByAddress, values)
       .then((data) => {
-        // console.log("TJ json", data);
         res.json(data.rows)
       })
       .catch(error => console.log(error));
