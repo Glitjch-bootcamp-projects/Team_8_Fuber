@@ -6,6 +6,10 @@
   --color-grey-darker: #545454;
 }
 
+body {
+  cursor: default;
+}
+
 .checkout {
   display: flex;
   flex-wrap: wrap;
@@ -38,14 +42,14 @@
 .checkout-container {
   background-color: #f2f2f2;
   padding: 5px 20px 15px 20px;
-  border: 1px solid lightgrey;
+  border: 1px solid var(--color-grey-darker);
   border-radius: 3px;;
 }
 
 .cart-info {
   background-color: #f2f2f2;
   padding: 5px 20px 15px 20px;
-  border: 1px solid lightgrey;
+  border: 1px solid var(--color-grey-darker);
   border-radius: 3px;;
 }
 
@@ -53,7 +57,7 @@ input[type=text] {
   width: 100%;
   margin-bottom: 20px;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-grey-darker);
   border-radius: 3px;
 }
 
@@ -81,5 +85,5 @@ label {
 
 span.price {
   float: right;
-  color: grey;
+  color: var(--color-grey-darker);
 }

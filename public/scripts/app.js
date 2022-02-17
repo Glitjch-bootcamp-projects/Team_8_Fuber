@@ -50,8 +50,11 @@ $(() => {
     $('.4').show();
   })
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 7943e988cc4e83c3307ad6acae5b2ad812cb0892
 
     // when user clicks on restaurant menu appears
     $("#kebab-kingdom").on('click', (data) => {

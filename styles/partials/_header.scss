@@ -152,6 +152,8 @@ header {
   background-color: white;
   width: 300px;
   max-width: 80%;
+  transition-timing-function: ease-in-out;
+  transition-duration: 200ms;
 }
 
 .modal-header {
@@ -167,12 +169,14 @@ header {
   font-weight: bold;
 }
 
-.modal-header .close-button {
+.modal-header .closeBtn {
   cursor: pointer;
   border:none;
   outline:none;
-  background: none;
+  background: white;
   font-size: 1.25rem;
+  border: 0;
+  color: #aaaaaa;
   font-weight: bold;
 }
 
