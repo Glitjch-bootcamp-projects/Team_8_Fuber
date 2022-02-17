@@ -19,6 +19,26 @@ module.exports = (db) => {
           restaurants: data.rows,
         }
         res.render("restaurants", templateVars);
+        res.json(data.rows)
+        return templateVars
+      })
+      .then((data) => {
+        console.log("TJ json", data);
+        res.json(data)
+      })
+      .catch(error => console.log(error));
+  });
+
+
+  // loads restaurants page from header
+  router.get("/update-address", (req, res) => {
+    const getRestaurantsByAddress = `SELECT * FROM restaurants WHERE location LIKE $1 LIMIT 6;`;
+    const values = [req.query.address];
+    // console.log("TJ values", values);
+    return db.query(getRestaurantsByAddress, values)
+      .then((data) => {
+        // console.log("TJ json", data);
+        res.json(data.rows)
       })
       .catch(error => console.log(error));
   });
@@ -87,45 +107,3 @@ module.exports = (db) => {
   // do not delete
   return router;
 };
-
-
-  // const getRestaurantsByAddress = (req, res) => {
-  //   let query = `SELECT * FROM restaurants WHERE location LIKE $1;`;
-  //   const values = [req.query.address];
-  //   return db.query(query, values)
-  //     .then(data => {
-  //       console.log('++++++data.rows', data.rows);
-  //       return res.json({ data: data.rows })
-  //     })
-  //     .catch(error => console.log(error));
-  // };
-
-
-    // // get all restaurants
-  // router.get("/all-restaurants", (req, res) => {
-  //   db.query(`SELECT * FROM restaurants;`)
-  //     .then(data => {
-  //       const restaurants = data.rows;
-  //       res.json({ restaurants });
-  //     })
-  //     .catch(err => {
-  //       res
-  //         .status(500)
-  //         .json({ error: err.message });
-  //     });
-  // });
-
-
-    // get restaurants from home based on address. Using simple filter e.g. include Vancouver, for now
-  // router.get("/location-based", (req, res) => {
-  //   console.log("+++++++++location-based in routes");
-  //   console.log('++++++++req', req.query);
-  //   const getRestaurantsByAddress = `SELECT * FROM restaurants WHERE location LIKE $1;`;
-  //   const values = [req.query.address];
-  //   return db.query(getRestaurantsByAddress, values)
-  //     .then(data => {
-  //       console.log('++++++data.rows', data.rows);
-  //       res.json({ data: data.rows })
-  //     })
-  //     .catch(error => console.log(error));
-  // });

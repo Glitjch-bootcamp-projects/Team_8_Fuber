@@ -70,24 +70,6 @@ $(() => {
       window.location.href = `${local}/api/restaurants/menus/kebab-kingdom`;
     });
 
-    // when user filters restaurant by clicking on $ button on side bar, restaurants filter
-    // $(".one-dollar").on('click', () => {
-    //   // console.log("ajax");
-    //   // $("#kebab-kingdom").empty();
-    //   $.ajax({
-    //     url: "/api/restaurants/one-dollar",
-    //     type: 'get',
-    //     data: $(".one-dollar"),
-    //     success: () => console.log('data from app.js'),
-    //     error: error => console.log(error)
-    //   })
-    //     .then((data) => {
-    //       $("#kebab-kingdom").append(data);
-    //       // console.log("log", data);
-    //     })
-    // })
-
-
     // sends message as order is being prepared
     $("#finalizing-order").click(()=>{
       $.get("/api/progress/order-ready")

@@ -52,9 +52,6 @@ $(() => {
       console.log("adax");
       appendItems(result.items)
       cartCounter();
-      // for(let t of result.items){
-      //   console.log(t);
-      // }
     },
     error: function (err) {
       console.log("error", err);
