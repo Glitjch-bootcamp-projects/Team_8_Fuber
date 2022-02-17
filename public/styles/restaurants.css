@@ -8,6 +8,7 @@
 
 body {
   font-family: sans-serif;
+  cursor: default;
 }
 
 .sidebar {
@@ -51,7 +52,6 @@ body {
 .sidebar .sidebar-text span {
   display: flex;
   align-items: center;
-  padding: 0.5rem 0 0.25rem 0;
   border: 0;
   padding: 6px 7px;
   background: var(--color-grey);
@@ -61,6 +61,7 @@ body {
 .sidebar .sidebar-text span .icon {
   width: 24px;
   height: 24px;
+  margin-right: 1rem;
 }
 .sidebar .sidebar-text span:hover {
   background: var(--color-grey-darker);
@@ -133,17 +134,17 @@ body {
 }
 .sidebar .sidebar-dietary span {
   display: flex;
-  justify-content: flex-start;
+  align-items: center;
   border: 0;
-  width: 150px;
   padding: 6px 7px;
   background: var(--color-grey);
   border-radius: 30px;
   margin: 0.5rem 0.25rem 0 0;
 }
-.sidebar .sidebar-dietary span img {
+.sidebar .sidebar-dietary span .icon {
   width: 24px;
   height: 24px;
+  margin-right: 1rem;
 }
 .sidebar .sidebar-dietary span:hover {
   background: var(--color-grey-darker);
@@ -183,6 +184,7 @@ body {
 .listings .header .header-view-options .view-all {
   color: var(--color-green);
   padding-right: 2rem;
+  cursor: pointer;
 }
 .listings .header .header-view-options .view-more .arrow {
   width: 30px;
@@ -211,6 +213,7 @@ body {
   width: calc(33.3333333333% - 16.6666666667px);
   margin-top: 2rem;
   padding-right: 20px;
+  cursor: pointer;
 }
 .listings .listings-grid .listings-grid-element:hover {
   box-shadow: 2px 2px #5451497c;

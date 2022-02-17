@@ -157,6 +157,8 @@ header .options .options-button-delivery.selected {
   background-color: white;
   width: 300px;
   max-width: 80%;
+  transition-timing-function: ease-in-out;
+  transition-duration: 200ms;
 }
 
 .modal-header {

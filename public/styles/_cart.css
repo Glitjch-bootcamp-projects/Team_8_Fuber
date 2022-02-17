@@ -93,6 +93,7 @@ body {
   color: white;
   padding: 0.8rem;
   font-size: 1.2rem;
+  cursor: pointer;
 }
 
 #cart-modal {
@@ -109,7 +110,6 @@ body {
 .modal-content {
   margin: auto;
   padding: 20px;
-  border: 1px solid #888;
   width: 432px;
   height: 700px;
 }

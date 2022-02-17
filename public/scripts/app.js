@@ -53,7 +53,7 @@ $(() => {
       $("#overlay").css("opacity", "1");
     })
 
-    $('.closeBtn').click(function() {
+    $('.close-button').click(function() {
       $("#modal").css("transform", "scale(0)");
       $("#overlay").css("opacity", "0");
     })

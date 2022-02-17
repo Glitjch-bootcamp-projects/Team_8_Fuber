@@ -8,6 +8,7 @@
 
 body {
   font-family: sans-serif;
+  cursor: default;
 }
 
 .sidebar {
@@ -38,6 +39,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  cursor: pointer;
 }
 .sidebar .sidebar-text span {
   display: flex;
@@ -52,6 +54,7 @@ body {
 .sidebar .sidebar-text span .icon {
   width: 24px;
   height: 24px;
+  margin-right: 1rem;
 }
 .sidebar .sidebar-text span:hover {
   background: var(--color-grey-darker);
@@ -67,11 +70,12 @@ body {
   display: flex;
   justify-content: center;
   border: 0;
-  width: 100px;
+  width: 50%;
   padding: 6px 7px;
   background: var(--color-grey);
   border-radius: 30px;
   margin: 0.5rem 0.25rem 0 0;
+  cursor: pointer;
 }
 .sidebar .sidebar-price span:hover {
   background: var(--color-grey-darker);
@@ -86,17 +90,18 @@ body {
 }
 .sidebar .sidebar-dietary span {
   display: flex;
-  justify-content: flex-start;
+  align-items: center;
   border: 0;
-  width: 150px;
   padding: 6px 7px;
   background: var(--color-grey);
   border-radius: 30px;
   margin: 0.5rem 0.25rem 0 0;
+  cursor: pointer;
 }
-.sidebar .sidebar-dietary span img {
+.sidebar .sidebar-dietary span .icon {
   width: 24px;
   height: 24px;
+  margin-right: 1rem;
 }
 .sidebar .sidebar-dietary span:hover {
   background: var(--color-grey-darker);
@@ -161,10 +166,10 @@ body {
 .menu-container .menu-header .menu-items .item-grid .item {
   display: flex;
   flex-direction: column;
+  font-size: 0.9rem;
 }
 .menu-container .menu-header .menu-items .item-grid .item .item-description {
-  font-size: 0.9rem;
-  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
 }
 .menu-container .menu-header .menu-items .item-grid .menu-add {
   margin: auto 0 auto auto;
@@ -178,6 +183,7 @@ body {
   background: var(--color-grey);
   font-size: 1rem;
   color: black;
+  cursor: pointer;
 }
 .menu-container .menu-header .menu-items .item-grid .menu-add:hover {
   background: #929292;

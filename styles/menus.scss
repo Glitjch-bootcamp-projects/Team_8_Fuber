@@ -8,6 +8,7 @@
 
 body {
   font-family: sans-serif;
+  cursor: default;
 }
 
 .sidebar {
@@ -37,6 +38,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    cursor: pointer;
     span {
       display: flex;
       align-items: center;
@@ -49,6 +51,7 @@ body {
       .icon {
         width: 24px;
         height: 24px;
+        margin-right: 1rem;
       }
       &:hover {
         background: var(--color-grey-darker);
@@ -65,11 +68,12 @@ body {
       display: flex;
       justify-content: center;
       border: 0;
-      width: 100px;
+      width: 50%;
       padding: 6px 7px;
       background: var(--color-grey);
       border-radius: 30px;
       margin: 0.5rem 0.25rem 0 0;
+      cursor: pointer;
       &:hover {
         background: var(--color-grey-darker);
         color: var(--color-grey);
@@ -84,16 +88,17 @@ body {
     justify-content: space-between;
     span {
       display: flex;
-      justify-content: flex-start;
+      align-items: center;
       border: 0;
-      width: 150px;
       padding: 6px 7px;
       background: var(--color-grey);
       border-radius: 30px;
       margin: 0.5rem 0.25rem 0 0;
-      img {
+      cursor: pointer;
+      .icon {
         width: 24px;
         height: 24px;
+        margin-right: 1rem;
       }
       &:hover {
         background: var(--color-grey-darker);
@@ -160,9 +165,9 @@ body {
         .item {
           display: flex;
           flex-direction: column;
+          font-size: 0.9rem;
           .item-description{
-            font-size: 0.9rem;
-            padding-bottom: 0.4rem;
+            margin-bottom: 1rem;
           }
         }
         .menu-add {
@@ -177,6 +182,7 @@ body {
           background: var(--color-grey);
           font-size: 1rem;
           color: black;
+          cursor: pointer;
           &:hover {
             background: #929292;
             transition-timing-function: ease-in-out;
