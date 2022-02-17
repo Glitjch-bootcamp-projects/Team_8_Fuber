@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-#modaljacky {
+#modal {
   position: fixed;
   top: 7%;
   left: 20%;
@@ -16,7 +16,7 @@
   max-width: 80%;
 }
 
-.modal-header-jacky {
+.modal-header {
   padding: 10px 15px;
   display: flex;
   justify-content: space-between;
@@ -24,12 +24,12 @@
   border-bottom: 1px solid black;
 }
 
-.modal-header-jacky .title {
+.modal-header .title {
   font-size: 1.25rem;
   font-weight: bold;
 }
 
-.modal-header-jacky .close-button {
+.modal-header .close-button {
   cursor: pointer;
   border:none;
   outline:none;

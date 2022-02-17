@@ -4,12 +4,12 @@
 $(() => {
 
   $('.changeAddressBtn').click(function() {
-    $("#modaljacky").css("transform", "scale(1)");
+    $("#modal").css("transform", "scale(1)");
     $("#overlay").css("opacity", "1");
   })
 
   $('.closeBtn').click(function() {
-    $("#modaljacky").css("transform", "scale(0)");
+    $("#modal").css("transform", "scale(0)");
     $("#overlay").css("opacity", "0");
   })
 
@@ -62,9 +62,21 @@ $(() => {
       $('#time').slideToggle();
     });
 
+    $('.changeAddressBtn').click(function() {
+      $("#modal").css("transform", "scale(1)");
+      $("#overlay").css("opacity", "1");
+    })
+
+    $('.closeBtn').click(function() {
+      $("#modal").css("transform", "scale(0)");
+      $("#overlay").css("opacity", "0");
+    })
+
+    $('.addressBar').keyup(function () {
+      $(".changeAddressBtn").text($(this).val());
+    });
 
 
-    
     // when user clicks on restaurant menu appears
     $("#kebab-kingdom").on('click', (data) => {
       window.location.href = `${local}/api/restaurants/menus/kebab-kingdom`;
