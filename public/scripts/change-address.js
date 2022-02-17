@@ -1,8 +1,10 @@
 $(() => {
-  // when user clicks on change button updates button text
+  // when user clicks on change button, updates button text
   $(".addressBtn").click((event) => {
     event.preventDefault();
     $(".header-address-text").text($(".addressBar").val())
+    $("#modal").css("transform", "scale(0)");
+    $("#overlay").css("opacity", "0");
 
     const generateRest = function (restaurant) {
       const restTemplate = `

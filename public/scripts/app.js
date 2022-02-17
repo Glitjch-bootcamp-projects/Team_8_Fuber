@@ -2,7 +2,9 @@
 
 
 $(() => {
-
+  console.log("client.js touched");
+  const local = "http://localhost:8080";
+  
   $('.changeAddressBtn').click(function() {
     $("#modal").css("transform", "scale(1)");
     $("#overlay").css("opacity", "1");
@@ -12,10 +14,6 @@ $(() => {
     $("#modal").css("transform", "scale(0)");
     $("#overlay").css("opacity", "0");
   })
-
-  // $('.addressBar').keyup(function () {
-  //   $(".changeAddressBtn").text($(this).val());
-  // });
 
   // Jacky
   //toggles schedule on main page
@@ -52,29 +50,7 @@ $(() => {
     $('.4').show();
   })
 
-  console.log("client.js touched");
-  const local = "http://localhost:8080";
 
-    // Jacky
-    //toggles schedule on main page
-    $('.Schedule').click(function () {
-      $('#date').slideToggle();
-      $('#time').slideToggle();
-    });
-
-    $('.changeAddressBtn').click(function() {
-      $("#modal").css("transform", "scale(1)");
-      $("#overlay").css("opacity", "1");
-    })
-
-    $('.closeBtn').click(function() {
-      $("#modal").css("transform", "scale(0)");
-      $("#overlay").css("opacity", "0");
-    })
-
-    $('.addressBar').keyup(function () {
-      $(".changeAddressBtn").text($(this).val());
-    });
 
 
     // when user clicks on restaurant menu appears
@@ -89,40 +65,5 @@ $(() => {
     $("#order-delivered").click(()=>{
       $.get("/api/progress/order-delivered")
     });
-
-    // testing submit form
-    // $(".addressBtn").on('click', (data) => {
-    //   console.log('click testing submit form');
-    //   const serializeData = $(".addressBar").serialize();
-    //   const address = $("#address").val().serialize();
-    //   $.ajax({
-    //     url: "/api/restaurants/address",
-    //     type: 'get',
-    //     data: { address },
-    //     success: function (data) {
-    //       console.log("ajax data from backend", data);
-    //     },
-    //     error: function (error) {
-    //       console.log(error);
-    //     }
-    //   })
-    // })
-
-
-    // // store this data somewhere
-    // const serializeData = $(".addressBar").serialize();
-    // console.log('serializedata:    ', serializeData);
-    // const address = $("#address").val();
-    // $.ajax({
-    //   url: "/api/restaurants/location-based",
-    //   type: 'get',
-    //   data: { address },
-    //   success: function (data) {
-    //     console.log("ajax data from backend", data);
-    //   },
-    //   error: function (error) {
-    //     console.log(error);
-    //   }
-    // })
 
 });
