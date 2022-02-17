@@ -50,11 +50,28 @@ $(() => {
     $('.4').show();
   })
 
-<<<<<<< HEAD
 
+   //scroll views to where menu-subheaders are
+   $('#m1').click(function () {
+    var elm = document.getElementById('kb')
+    elm.scrollIntoView(true);
+  })
 
-=======
->>>>>>> 7943e988cc4e83c3307ad6acae5b2ad812cb0892
+  $('#m2').click(function () {
+    var elm = document.getElementById('sa')
+    elm.scrollIntoView(true);
+  })
+
+  $('#m3').click(function () {
+    var elm = document.getElementById('de')
+    elm.scrollIntoView(true);
+  })
+
+  $('#m4').click(function () {
+    var elm = document.getElementById('dk')
+    elm.scrollIntoView(true);
+  })
+
 
     // when user clicks on restaurant menu appears
     $("#kebab-kingdom").on('click', (data) => {

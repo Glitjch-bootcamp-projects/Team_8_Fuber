@@ -31,6 +31,7 @@ $(() => {
         </div>
       `;
       return restTemplate;
+
     };
 
     // generate restaurants intoc container
