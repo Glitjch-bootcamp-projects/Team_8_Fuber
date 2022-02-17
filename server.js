@@ -10,12 +10,15 @@ const morgan = require("morgan");
 const bodyParser = require('body-parser');
 const twilio = require("./lib/twilio");
 const cookieSession = require("cookie-session");
+const cookieParser = require('cookie-parser');
 
 // PG database client/connection setup
 const { Pool } = require("pg");
 const dbParams = require("./lib/db.js");
 const db = new Pool(dbParams);
 db.connect();
+
+const cartDb = require('./lib/cart-db.js')
 
 // Load the logger first so all (static) HTTP requests are logged to STDOUT
 // 'dev' = Concise output colored by response status for development use.
@@ -25,6 +28,7 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(cookieParser());
 app.use(cookieSession({
   name: 'session',
   keys: ['key1']
@@ -81,7 +85,11 @@ app.use("/api/menus", menusRoutes(db));
 // Separate them into separate routes files (see above).
 
 app.get("/", (req, res) => {
+  res.cookie(`session_id`,`testtesttest`);
   res.render("index");
+});
+
+app.get("/", (req, res) => {
 });
 
 app.listen(PORT, () => {

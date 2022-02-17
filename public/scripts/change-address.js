@@ -1,5 +1,5 @@
 $(() => {
-  // when user clicks on change button updates button text
+  // when user clicks on change button, updates button text
   $(".addressBtn").click((event) => {
     event.preventDefault();
     $(".header-address-text").text($(".addressBar").val())
