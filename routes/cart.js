@@ -7,7 +7,8 @@
 
 const express = require('express');
 const router = express.Router();
-const cartDB = require("../lib/cart-db");
+const { getCart, addToCart } = require("../lib/cart-db");
+
 
 module.exports = (db) => {
 
@@ -30,14 +31,15 @@ module.exports = (db) => {
 
   // pushes chicken kebab into database
   router.post("/", (req, res) => {
-    cartDB.push(req.body);
+    addToCart(req.body);
   })
 
   // when user clicks checkout, responds with kebab db to send to cart
   router.get("/cart-kebab", (req, res) => {
-    console.log("TJ routes cart.js cart-kebab cartDB", cartDB);
-    req.session
-    res.send(cartDB)
+    // const cartDB = getCart();
+    // console.log("TJ routes cart.js cart-kebab cartDB", cartDB);
+    // req.session
+    // res.send(cartDB)
   });
 
   return router;

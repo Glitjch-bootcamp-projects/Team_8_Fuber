@@ -1,6 +1,5 @@
 // Client facing scripts here
 
-
 $(() => {
   console.log("client.js touched");
   const local = "http://localhost:8080";
