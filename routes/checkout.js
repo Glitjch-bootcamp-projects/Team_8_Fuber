@@ -6,14 +6,16 @@
  */
 
 const express = require('express');
-const router  = express.Router();
+const router = express.Router();
+const cartDB = require("../lib/cart-db");
 
 module.exports = (db) => {
 
- // load checkout page
- router.get("/", (req, res) => {
-  res.render("checkout")
-});
+  // load checkout page
+  router.get("/", (req, res) => {
+    res.render("checkout")
+
+  })
 
 
   return router;

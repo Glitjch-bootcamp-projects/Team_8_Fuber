@@ -1,11 +1,9 @@
 // Client facing scripts here
 
-
 $(() => {
-
   console.log("client.js touched");
   const local = "http://localhost:8080";
-
+  
   $('.changeAddressBtn').click(function() {
     $("#modal").css("transform", "scale(1)");
     $("#overlay").css("opacity", "1");
@@ -50,6 +48,7 @@ $(() => {
     $('.3').css("display", "none");
     $('.4').show();
   })
+
 
    //scroll views to where menu-subheaders are
    $('#m1').click(function () {
