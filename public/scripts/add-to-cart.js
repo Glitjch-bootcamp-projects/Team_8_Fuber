@@ -44,11 +44,8 @@ $(() => {
       console.log("addTotalCart",      $(".cart-checkout-total").text());
       const originalTotal =  Number($(".cart-checkout-total").text());
       const newTotal = Number(price);
-      $(".cart-checkout-total").text(`${originalTotal + newTotal / 100}`)
+      $(".cart-checkout-total").text((originalTotal + newTotal / 100).toFixed(2))
     };
-    // calculates total based on item added
-
-
     $.ajax({
       url: "/api/cart/add-items",
       method: "GET",
