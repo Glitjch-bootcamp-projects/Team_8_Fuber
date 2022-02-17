@@ -8,11 +8,11 @@
 
 header {
   display: flex;
-  .logo {
-    font-weight: 300;
-    span {
-      font-weight: 600;
-      color: var(--color-green);
-    }
-  }
+}
+header .logo {
+  font-weight: 300;
+}
+header .logo span {
+  font-weight: 600;
+  color: var(--color-green);
 }
