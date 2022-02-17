@@ -28,10 +28,10 @@
         <div class="sidebar-subheader">
         </div>
         <div class="sidebar-text">
-          <span><img class="icon" src="https://cdn-icons-png.flaticon.com/128/604/604839.png"></img>Kebabs</span>
-          <span><i class="icon" data-feather="feather"></i>Salads</span>
-          <span><img class="icon" src="https://cdn-icons.flaticon.com/png/128/3053/premium/3053580.png?token=exp=1644715772~hmac=039ed816b46bb8e479d2cb6a402f7c4f"></img>Drinks</span>
-          <span><img class="icon" src="https://cdn-icons-png.flaticon.com/128/2965/2965574.png"></img>Desserts</span>
+          <button type="button" id="m1"><img class="icon" src="https://cdn-icons-png.flaticon.com/128/604/604839.png"></img>Kebabs</button>
+          <button type="button" id="m2"><i class="icon" data-feather="feather"></i>Salads</button>
+          <button type="button" id="m3"><img class="icon" src="https://cdn-icons.flaticon.com/png/128/3053/premium/3053580.png?token=exp=1644715772~hmac=039ed816b46bb8e479d2cb6a402f7c4f"></img>Drinks</button>
+          <button type="button" id="m4"><img class="icon" src="https://cdn-icons-png.flaticon.com/128/2965/2965574.png"></img>Desserts</button>
         </div>
         <div class="sidebar-subheader">
           Sort by price
@@ -57,7 +57,7 @@
     <%-include('partials/_header')%>
 
     <!-- Menu -->
-    <div class="menu-container">
+    <div class="menu-container" id="kb">
       <div class="header">
         <img src="https://images.unsplash.com/photo-1527756898251-203e9ce0d9c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2075&q=80"></img>
         <div class="header-title">
@@ -74,7 +74,7 @@
       
         </div>
       </div>
-      <div class="menu-header">Salads
+      <div class="menu-header" id="sa">Salads
         <div class="menu-items">
           <div class="item-grid">
             <div class="item">Chicken Caesar Salad
@@ -110,7 +110,7 @@
           </div>
         </div>
       </div>
-      <div class="menu-header">Desserts
+      <div class="menu-header" id="de">Desserts
         <div class="menu-items">
           <div class="item-grid">
             <div class="item">Chocolate cake
@@ -146,7 +146,7 @@
           </div>
         </div>
       </div>
-      <div class="menu-header">Drinks
+      <div class="menu-header" id="dk">Drinks
         <div class="menu-items">
           <div class="item-grid">
             <div class="item">Soda pop

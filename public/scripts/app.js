@@ -38,6 +38,27 @@ $(() => {
     $('.4').show();
   })
 
+   //scroll views to where menu-subheaders are
+   $('#m1').click(function () {
+    var elm = document.getElementById('kb')
+    elm.scrollIntoView(true);
+  })
+
+  $('#m2').click(function () {
+    var elm = document.getElementById('sa')
+    elm.scrollIntoView(true);
+  })
+
+  $('#m3').click(function () {
+    var elm = document.getElementById('de')
+    elm.scrollIntoView(true);
+  })
+
+  $('#m4').click(function () {
+    var elm = document.getElementById('dk')
+    elm.scrollIntoView(true);
+  })
+
   console.log("client.js touched");
   const local = "http://localhost:8080";
 
