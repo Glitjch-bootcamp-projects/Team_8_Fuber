@@ -117,7 +117,4 @@ const parseItemId = function (tag) {
   $('.feather-plus-circle').click(function () {
     displayCartCount()
   })
-
-
-
 });

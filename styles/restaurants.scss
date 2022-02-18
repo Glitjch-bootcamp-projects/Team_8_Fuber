@@ -82,16 +82,6 @@ body {
     }
   }
 
-    /* JAVASCRIPT FOR SLIDER
-  var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
-output.innerHTML = slider.value; // Display the default slider value
-
-// Update the current slider value (each time you drag the slider handle)
-slider.oninput = function() {
-  output.innerHTML = this.value;
-  */
-
   .sidebar-price-range {
     padding-top: 1.3rem;
   }
@@ -111,7 +101,7 @@ slider.oninput = function() {
     transition: opacity .2s;
   }
   .slider:hover {
-    opacity: 1; /* Fully shown on mouse-over */
+    opacity: 1;
     transition-timing-function: ease-in-out;
     transition-duration: 100ms;
   }

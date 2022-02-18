@@ -104,16 +104,16 @@ body {
 }
 
 #cart-modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 61%;
   top: 9%;
-  overflow: auto; /* Enable scroll if needed */
+  overflow: auto;
   background: white;
   box-shadow: 4px 4px 4px 4px #5451497c;
 }
-/* Modal Content */
+
 .modal-content {
   margin: auto;
   padding: 20px;
@@ -121,7 +121,6 @@ body {
   height: 700px;
 }
 
-/* The Close Button */
 .close {
   color: #aaaaaa;
   font-size: 28px;

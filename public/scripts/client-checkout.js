@@ -68,8 +68,6 @@ $(() => {
         addToTotal(result.items[0].price)
         appendItem(getCart());
         console.log("TJ client-checkout result", result);
-        // appendItems(result.items);
-        // addTotalCart(result.items[0].price);
       }
     }
     )
