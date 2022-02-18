@@ -8,7 +8,7 @@ $(() => {
     let data = window.sessionStorage.getItem('cart')
     return JSON.parse(data) || [];
   };
-  
+
   const getTotal = function () {
     let data = window.sessionStorage.getItem('total')
     console.log("TJ getTotal() add-to-cart.js data", JSON.parse(data));
@@ -57,10 +57,19 @@ $(() => {
     window.sessionStorage.setItem('total', JSON.stringify(total))
   };
 
+  // TODO
+const parseItemId = function (tag) {
+  const itemId =  tag.substring(11);
+  return itemId;
+}
+
   const appendItems = function (items) {
     $(".cart-items").empty();
+    // use icon id to retrieve specific kebab
+    console.log("TJ item add-to-cart", items);
+
     for (const item of items) {
-      if (item.name === "Chicken Kebab") {
+      if ($(`#dynamic-item-${item.id}`).hasClass(`${item.rest_id}-item-${item.id}`)) {
         $(".cart-items").append(
           createItem(item)
         )
@@ -70,7 +79,7 @@ $(() => {
 
   const updateCartTotal = function (prices) {
     let calculateEach = 0;
-    prices.forEach((price) =>{
+    prices.forEach((price) => {
       calculateEach += price
     })
     $('.cart-checkout-total').text((calculateEach / 100).toFixed(2));
@@ -78,6 +87,8 @@ $(() => {
 
   appendItems(getCart());
   updateCartTotal(getTotal());
+
+
   $('.feather-plus-circle').click(function () {
     // add items to the container
 
@@ -92,6 +103,7 @@ $(() => {
       url: "/api/cart/add-items",
       method: "GET",
       success: function (result) {
+        console.log("TJ add-to-cart ajax", result);
         addTotalCart(result.items[0].price);
         addToCart(result.items[0])
         addToTotal(result.items[0].price)

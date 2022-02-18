@@ -29,15 +29,15 @@ $(() => {
       return $itemTemplate;
     };
 
-    const appendItems = function (items) {
-      for (const item of items) {
-        if (item.name === "Chicken Kebab") {
-          $(".cart-items").append(
-            createItems(item)
-          )
-        }
-      }
-    };
+    // const appendItems = function (items) {
+    //   for (const item of items) {
+    //     if (item.name === "Chicken Kebab") {
+    //       $(".cart-items").append(
+    //         createItems(item)
+    //       )
+    //     }
+    //   }
+    // };
 
     // modifies the checkout cost button
     const addTotalCart = function (price) {
