@@ -12,7 +12,6 @@ module.exports = (db) => {
 
   // generate menu items
   router.get("/", (req, res) =>{
-    console.log("hello2");
     return db.query(`SELECT * FROM items WHERE rest_id = 3`)
     .then( data => {
       const templateVars = {
@@ -21,9 +20,6 @@ module.exports = (db) => {
       res.render("menus", templateVars);
     })
   });
-
-
-
 
   return router;
 };

@@ -8,7 +8,7 @@ $(() => {
         <div class="item">${item.name}
           <span class="item-description">$${item.price / 100} | ${item.description}</span>
         </div>
-        <div class="menu-add">
+        <div id="dynamic-item-${item.id}" class="menu-add ${item.rest_id}-item-${item.id}">
           <i data-feather="plus-circle"></i>
         </div>
       </div>
