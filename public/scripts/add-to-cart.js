@@ -8,7 +8,7 @@ $(() => {
     let data = window.sessionStorage.getItem('cart')
     return JSON.parse(data) || [];
   };
-  
+
   const getTotal = function () {
     let data = window.sessionStorage.getItem('total')
     console.log("TJ getTotal() add-to-cart.js data", JSON.parse(data));
@@ -75,9 +75,6 @@ $(() => {
     })
     $('.cart-checkout-total').text((calculateEach / 100).toFixed(2));
   }
-
-  appendItems(getCart());
-  updateCartTotal(getTotal());
 
   appendItems(getCart());
   updateCartTotal(getTotal());
