@@ -79,6 +79,8 @@ $(() => {
   appendItems(getCart());
   updateCartTotal(getTotal());
 
+  appendItems(getCart());
+  updateCartTotal(getTotal());
   $('.feather-plus-circle').click(function () {
 
     // modifies the checkout cost button
