@@ -78,6 +78,8 @@ $(() => {
 
   appendItems(getCart());
   updateCartTotal(getTotal());
+
+  // when user clicks the add icon on a menu item, the cart list and the checkout button total updates
   $('.feather-plus-circle').click(function () {
 
     // modifies the checkout cost button
