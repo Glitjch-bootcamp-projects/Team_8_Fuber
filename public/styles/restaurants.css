@@ -57,6 +57,7 @@ body {
   background: var(--color-grey);
   border-radius: 30px;
   margin: 0.5rem 0.25rem 0 0;
+  cursor: pointer;
 }
 .sidebar .sidebar-text span .icon {
   width: 24px;
@@ -82,6 +83,7 @@ body {
   background: var(--color-grey);
   border-radius: 30px;
   margin: 0.5rem 0.25rem 0 0;
+  cursor: pointer;
 }
 .sidebar .sidebar-price button:hover {
   background: var(--color-grey-darker);
@@ -140,6 +142,7 @@ body {
   background: var(--color-grey);
   border-radius: 30px;
   margin: 0.5rem 0.25rem 0 0;
+  cursor: pointer;
 }
 .sidebar .sidebar-dietary span .icon {
   width: 24px;
