@@ -12,7 +12,7 @@ $(() => {
   }
 
   // connects to route cart, when user checksout from cart, log
-  $("checkout.ejs").ready(() => {
+  $("progress.ejs").ready(() => {
     console.log("TJ client-checkout doc.ready");
 
     // create each item for ejs

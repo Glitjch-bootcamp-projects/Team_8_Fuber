@@ -54,6 +54,7 @@ body {
     flex-direction: column;
     padding-bottom: 1rem;
     justify-content: space-around;
+    width: 200px;
     .item {
       display: flex;
       align-items: center;
@@ -89,7 +90,7 @@ body {
     }
   }
 }
-.total-price {
+h2 {
   position: fixed;
   bottom: 28px;
   right: 33%;
@@ -102,4 +103,9 @@ body {
   align-items: center;
   background: var(--color-grey);
   box-shadow: 2px 2px 2px 2px #545454;
+}
+
+p {
+  display: flex;
+  justify-content: space-between;
 }
