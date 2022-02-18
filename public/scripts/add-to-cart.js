@@ -57,10 +57,19 @@ $(() => {
     window.sessionStorage.setItem('total', JSON.stringify(total))
   };
 
+  // TODO
+const parseItemId = function (tag) {
+  const itemId =  tag.substring(11);
+  return itemId;
+}
+
   const appendItems = function (items) {
     $(".cart-items").empty();
+    // use icon id to retrieve specific kebab
+    console.log("TJ item add-to-cart", items);
+
     for (const item of items) {
-      if (item.name === "Chicken Kebab") {
+      if ($(`#dynamic-item-${item.id}`).hasClass(`${item.rest_id}-item-${item.id}`)) {
         $(".cart-items").append(
           createItem(item)
         )
@@ -70,7 +79,7 @@ $(() => {
 
   const updateCartTotal = function (prices) {
     let calculateEach = 0;
-    prices.forEach((price) =>{
+    prices.forEach((price) => {
       calculateEach += price
     })
     $('.cart-checkout-total').text((calculateEach / 100).toFixed(2));
@@ -93,6 +102,7 @@ $(() => {
       url: "/api/cart/add-items",
       method: "GET",
       success: function (result) {
+        console.log("TJ add-to-cart ajax", result);
         addTotalCart(result.items[0].price);
         addToCart(result.items[0])
         addToTotal(result.items[0].price)

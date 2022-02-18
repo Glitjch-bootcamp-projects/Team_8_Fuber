@@ -11,7 +11,7 @@ module.exports = (db) => {
 
   // loads restaurants page from index/home page
   router.get("/address", (req, res) => {
-    const getRestaurantsByAddress = `SELECT * FROM restaurants WHERE location LIKE $1 LIMIT 20;`;
+    const getRestaurantsByAddress = `SELECT * FROM restaurants WHERE location LIKE $1 LIMIT 70;`;
     const values = [req.query.address];
     return db.query(getRestaurantsByAddress, values)
       .then(data => {
@@ -32,7 +32,7 @@ module.exports = (db) => {
 
   // loads restaurants page from header
   router.get("/update-address", (req, res) => {
-    const getRestaurantsByAddress = `SELECT * FROM restaurants WHERE location LIKE $1 LIMIT 20;`;
+    const getRestaurantsByAddress = `SELECT * FROM restaurants WHERE location LIKE $1 LIMIT 70;`;
     const values = [req.query.address];
     return db.query(getRestaurantsByAddress, values)
       .then((data) => {
