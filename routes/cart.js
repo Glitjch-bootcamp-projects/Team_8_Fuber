@@ -17,7 +17,6 @@ module.exports = (db) => {
     res.render("../views/partials/_cart");
   });
 
-
   // add items to cart from menu
   router.get("/add-items", (req, res) => {
     return db.query(`SELECT * FROM items WHERE rest_id = 3`)
@@ -34,10 +33,6 @@ module.exports = (db) => {
 
   // when user clicks checkout, responds with kebab db to send to cart
   router.get("/cart-kebab", (req, res) => {
-    // const cartDB = getCart();
-    // console.log("TJ routes cart.js cart-kebab cartDB", cartDB);
-    // req.session
-    // res.send(cartDB)
   });
 
   return router;
